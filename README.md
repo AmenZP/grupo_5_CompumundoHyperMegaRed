@@ -1,7 +1,7 @@
 ### grupo_5_CompumundoHyperMegaRed
 
 
-CompuMundoHyperMegaRed será una tienda virtual para la adquisicion de (###) con una gran variedad de marcas y modelos, pero especialmente enfocandose en los productos que la poblacion gamer necesita hoy en dia. 
+CompuMundoHyperMegaRed será una tienda virtual para la adquisicion de (###) con una gran variedad de marcas y modelos, pero especialmente enfocandose en los productos que la poblacion gamer necesita hoy en dia con un diseño responsable para navegar en los diferentes dispositivos de manera agil y correcta. 
 
 En este proyecto trabajaremos tres aprendices del desarrollo web de diferentes paises de Latinoamerica.
 
