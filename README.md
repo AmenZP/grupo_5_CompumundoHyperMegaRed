@@ -1,4 +1,4 @@
-# grupo_5_CompumundoHyperMegaRed
+### grupo_5_CompumundoHyperMegaRed
 
 
 CompuMundoHyperMegaRed será una tienda virtual para la adquisicion de (###) con una gran variedad de marcas y modelos, pero especialmente enfocandose en los productos que la poblacion gamer necesita hoy en dia. 
@@ -12,3 +12,5 @@ Referencias
 - https://store.nvidia.com/en-us/geforce/store/?page=1&limit=9&locale=en-us
 - https://clonesyperifericos.com/descarga-la-lista-precios-partes-pc-gamer-unilago/
 
+## Link del Trello de nuestro proyecto
+- https://trello.com/cmhmr 
