@@ -1,16 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Aqui se usa el script para los inconos de fontawesome! -->
+    <script
+      src="https://kit.fontawesome.com/88b000fcfe.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akshar&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <p>Soy el Home</p>
-    <p><a href="/carrito">Link Carrito</a></p>
-    <p><a href="/login">Link login</a></p>
-    <p><a href="/productDetail">Link Detalle Producto</a></p>
-    <p><a href="/registro">Link Registro</a></p>
+    <!-- Aqui empieza la barra de navegacion -->
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="logo nav-link nav-menu-item"
+          >COMPUMUNDOHYPERMEGARED <i class="fa-solid fa-laptop-file"></i>
+        </a>
+        <!-- Aqui ponemos el logo de fontawesome, creando un boton con una clase nav-toggle que refiere a menu hamburguesa -->
+        <button class="nav-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-menu">
+          <li class="nav-menu-item">
+            <a href="/login" class="nav-menu-link nav-link">Login</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="/registro" class="nav-menu-link nav-link">Registro</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="/productDetail" class="nav-menu-link nav-link"
+              >Product Detail</a
+            >
+          </li>
+          <li class="nav-menu-item">
+            <a href="/carrito" class="nav-menu-link nav-link"
+              >Carrito de compras</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div>asd</div>
+    </main>
+
+    <script src="/js/script.js"></script>
   </body>
 </html>
