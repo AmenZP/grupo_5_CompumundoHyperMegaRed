@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0%;
   box-sizing: border-box;
 }
 
@@ -81,9 +82,63 @@ pequenios */
   display: none;
 }
 
+/* ----------------------------------------------------------------
+EMPIEZA EL MAIN
+------------------------------------------------------------------ */
+
+.section-div-h1 {
+  font-family: "Changa", sans-serif;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 0;
+  padding: 0px 0px;
+}
+
+/* .carrusel {
+  width: 90%;
+  max-width: 120em;
+  padding: 2em;
+
+  overflow: hidden;
+}
+.carrusel .grande {
+  width: 200%;
+  background-color: orange;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.carrusel .img {
+  width: calc(100% / 2);
+  background-color: rgb(207, 255, 196);
+}
+.carrusel .puntos {
+  width: 100%;
+  background-color: red;
+  padding: 1em;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.carrusel .punto {
+  width: 2em;
+  height: 2em;
+  background-color: blue;
+  margin: 1em;
+} */
+
+/* ------------------------------------------------------------------
+*******************************MEDIA QUERY****************************
+--------------------------------------------------------------------- */
 @media (max-width: 768px) {
   body {
-    padding: 90px 20px 0;
+    padding: 65px 20px 0;
+    width: 100%;
   }
 
   .header {
@@ -149,6 +204,36 @@ pequenios */
   .nav-menu_visible {
     left: 0%;
   }
-}
 
-/* Hasta aca esta la barra de navegacion nav  */
+  /* Hasta aca esta la barra de navegacion nav  */
+
+  .section-div-h1 {
+    text-align: center;
+  }
+
+  section.all-productos h1 {
+    text-align: center;
+    font-family: "Changa", sans-serif;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin: 0;
+    padding: 0px 0px;
+  }
+
+  div .articulo-main {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+
+  div.productos {
+    background-color: antiquewhite;
+    display: block;
+  }
+
+  .imagen-producto {
+    width: 80%;
+    max-width: 340px;
+  }
+}
