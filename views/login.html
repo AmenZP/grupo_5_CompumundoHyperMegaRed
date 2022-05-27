@@ -21,36 +21,40 @@
     <title>Login</title>
     <link rel="stylesheet" href="/css/styles.css" >
   </head>
-  <body>
-
+  <body class="cuentas">
     <p>
-      <button>Inicio</button>
-      <input type="button" action="/home.html">
+      <a class="pagina_inicio" href="/">Inicio</a>
     </p>
-  
-      <form action="/ingreso.html" method="post">
-      
-        <p>
-          <label name="Email">Usuario</label>
-          <input type="text" name="Usuario" required>
-        </p>
+    <section>
+      <h1>Ingresar</h1><br>
+      <article class="formulario">
         
-        <p>
-          <label name="Contraseña">Contraseña</label>
-          <input type="password" name="Contraseña" required>
-        </p>
-
-        <p>
-          <button>Continuar</button>
-          <input type="submit" id="boton_ingresar">
-        </p>
-
-        <p>
-          ¿Aun no tiene una cuenta?
-          <a href="registro.html">Cree una aquí</a>
-        </p>
-
-      </form>
-    <p>Soy Login</p>
+              
+            <form action="/ingreso.html" method="post">
+            
+              <div >
+                <label for="Email">Usuario</label>
+                <input class="entradas" type="text" name="Email" placeholder="usuario@ejemplo.com" required>
+              </div>
+              
+              <div>
+                <label for="Contraseña">Contraseña</label>
+                <input class="entradas" type="password" name="Contraseña" required>
+              </div>
+              <div class="rec_pass">
+                <label id="rp2" for="rec_Usuario">Guardar contraseña</label>
+                <input id="rp1" type="checkbox" name="rec_Usuario" value="Recordar">
+              </div>
+              <div class="boton_ingresar">
+                <button action="submit">Continuar</button>
+              </div>
+      </article>        
+              <div>
+                ¿Aun no tienes una cuenta?
+                <a href="registro.html">Creá una aquí</a>
+              </div>
+          
+          </form>
+      </section>  
   </body>
 </html>
