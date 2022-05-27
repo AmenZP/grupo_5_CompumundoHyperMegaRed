@@ -1,12 +1,17 @@
 * {
   margin: 0;
-  padding: 0%;
+  padding: 0;
   box-sizing: border-box;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 body {
   font-family: sans-serif;
-  padding: 90px 20px 0;
+  /* padding: 90px 20px 0; */
   background-color: #101010;
 }
 /* --------------- 
@@ -82,6 +87,11 @@ pequenios */
   display: none;
 }
 
+.flechas {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ----------------------------------------------------------------
 EMPIEZA EL MAIN
 ------------------------------------------------------------------ */
@@ -92,9 +102,65 @@ EMPIEZA EL MAIN
   text-transform: uppercase;
   font-size: 20px;
   margin: 0;
-  padding: 0px 0px;
+  padding-top: 85px;
 }
 
+h1 {
+  text-align: center;
+  font-family: "Changa", sans-serif;
+  color: whitesmoke;
+  text-transform: uppercase;
+  padding-top: 15px;
+}
+
+div.productos {
+  /* background-color: antiquewhite; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.articulo-main {
+  width: 50%;
+  /* border: 1px solid red; */
+}
+
+.descripcion {
+  padding: 0 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: "Changa", sans-serif;
+  color: whitesmoke;
+  text-transform: uppercase;
+  padding-top: 15px;
+}
+
+.imagen-producto {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div .articulo-main {
+  text-align: center;
+}
+
+.flechas {
+  justify-content: space-between;
+  color: whitesmoke;
+}
+.fa-solid {
+  margin: 7px auto 7px auto;
+}
+
+.precio {
+  color: whitesmoke;
+  font-size: 25px;
+  text-align: center;
+  text-align: center;
+  font-family: "Changa", sans-serif;
+  font-weight: bold;
+}
 /* .carrusel {
   width: 90%;
   max-width: 120em;
@@ -135,7 +201,7 @@ EMPIEZA EL MAIN
 /* ------------------------------------------------------------------
 *******************************MEDIA QUERY****************************
 --------------------------------------------------------------------- */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   body {
     padding: 65px 20px 0;
     width: 100%;
@@ -148,7 +214,7 @@ EMPIEZA EL MAIN
   .logo {
     font-family: "Akshar", sans-serif;
     font-family: "Roboto", sans-serif;
-    font-size: 10px;
+    font-size: 20px;
     padding: 0 10px;
     line-height: 60px;
   }
@@ -208,6 +274,8 @@ EMPIEZA EL MAIN
   /* Hasta aca esta la barra de navegacion nav  */
 
   .section-div-h1 {
+    padding: 0;
+    margin-top: 0px;
     text-align: center;
   }
 
@@ -224,11 +292,14 @@ EMPIEZA EL MAIN
   div .articulo-main {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 80%;
+    text-align: center;
+    background-color: #101010;
+    margin: 0 auto 30px auto;
   }
 
   div.productos {
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     display: block;
   }
 
@@ -236,4 +307,28 @@ EMPIEZA EL MAIN
     width: 80%;
     max-width: 340px;
   }
+  .flechas {
+    font-family: "Changa", sans-serif;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0 20px;
+    color: whitesmoke;
+    font-size: 15px;
+  }
+  .precio {
+    color: whitesmoke;
+    font-size: 25px;
+    text-align: center;
+    text-align: center;
+    font-family: "Changa", sans-serif;
+    font-weight: bold;
+  }
+  .fa-solid {
+    margin: 3px auto 3px auto;
+  }
+}
+.mensaje {
+  color: #76b900;
+  font-size: 25px;
+  text-align: center;
 }

@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  background-position: center;
+  height: 150px;
+  position: relative;
+}
+
+.header-cajon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70%;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 60px 0 60px;
+  color: white;
+}
+
+nav li {
+  list-style: none;
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+nav li span {
+  padding-left: 5px;
+}
+
+li a {
+  padding: 5px;
+  background-color: #fff;
+  text-decoration: none;
+}
+
+.carrito ion-icon {
+  vertical-align: bottom;
+  font-size: 20px;
+  padding-right: 5px;
+}
+
+.carrito a {
+  background-color: #7289da;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.contenedor-shop,
+.contenedor-productos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+
+.image {
+  margin-right: 20px;
+  margin-left: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sumar-carrito {
+  position: absolute;
+  width: 100%;
+  background-color: #7289da;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+}
+
+.image:hover .cart1,
+.image:hover .cart2,
+.image:hover .cart3,
+.image:hover .cart4 {
+  bottom: 50px;
+  opacity: 1;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* --- carrito ---- */
+
+.contenedor-productos {
+  max-width: 650px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.contenedor-productos ion-icon {
+  font-size: 25px;
+  color: blue;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.producto-header {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 4px solid lightgray;
+  margin: 0 auto;
+}
+
+.producto-titulo {
+  width: 45%;
+}
+
+.precio {
+  width: 15%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+}
+
+.cantidad {
+  width: 30%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+}
+
+.total {
+  width: 10%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+}
+
+.productos {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
