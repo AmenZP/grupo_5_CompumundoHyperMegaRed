@@ -1,0 +1,23 @@
+/*👉GLOBAL👈*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+    
+  body {
+    font-family: sans-serif;
+    /* padding: 90px 20px 0; */
+    background-color: #101010;
+  }
+
+/*👉NAV👈*/
+div .mainHead, .navMenuWrapper {
+    background-color: black;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.navMenuWrapper {
+    margin-bottom: 10px;
+}
