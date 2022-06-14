@@ -18,6 +18,110 @@ div .mainHead, .navMenuWrapper {
     padding-bottom: 10px;
 }
 
+.logoImg {
+  padding: 5px;
+}
+
 .navMenuWrapper {
     margin-bottom: 10px;
+    padding: 0px 7.5px;
+    text-align: center;
+}
+
+
+
+.searchBar {
+  margin-bottom: 10px;
+}
+
+.searchBarWrapper {
+  padding-bottom: 1.34em;
+}
+
+.searchButton {
+    height: 29px;
+    width: 29px;
+    border: none;
+    border-radius: 2px;
+}
+
+:placeholder-shown {
+  padding: 5px;
+}
+
+.lognShop {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-evenly;
+
+}
+
+.buttonLogin {
+  background-color: #7289DA;
+  border-radius: 4px;
+  padding: 0px 15px;
+  height: 25px;
+}
+
+.cartS {
+  color: whitesmoke;
+}
+
+.buttonNav {
+  color: whitesmoke;
+  background: none;
+  border: none;
+  font-size: 15px;
+  padding: 0 20px;
+  line-height: 25px;
+  padding-bottom: 5px;
+}
+
+.contenidoWrapper {
+  color: #fff!important; 
+  display: inline-block;
+}
+
+/*👉fin nav👈*/
+/*👉comienzo article👈*/
+
+.MainColNopaddRela {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.colWrapper h1, p{
+  color: whitesmoke;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+.imgProduct {
+  border: 3px solid #fff;
+  border-radius: 10px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  
+}
+
+.prodTitle {
+  padding-bottom: 25px;
+}
+
+.prodPriceCont {
+  padding-bottom: 15px;
+}
+
+.prodPriceCont p{
+  padding-bottom: 5px;
 }

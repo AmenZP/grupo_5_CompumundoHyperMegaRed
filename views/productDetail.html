@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/detallesStyle.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script
+      src="https://kit.fontawesome.com/88b000fcfe.js"
+      crossorigin="anonymous"></script>
     <title>Compumundo Hypermegared</title>
   </head>
   <body>
     <div class="wrapperMainHead">
         <div class="mainHead">
             <div class="row">
-              <a href="index.html" class="logoWrapper">
+              <a href="views/index.html" class="logoWrapper">
                   <img src="images/logoCHMR.svg" alt="logo CHMR"  class="logoImg">
               </a>
 
@@ -21,8 +23,10 @@
         <div class="navMenuWrapper">
             <div class="menuToolBar">
               <div class="searchBar">
-                  <input type="text" placeholder="Buscar...">
-                  <button type="submit"><i class="fa fa-search"></i></button>
+                  <div class="searchBarWrapper">
+                    <input type="text" placeholder="Buscar...">
+                    <button type="submit" class="searchButton"><i class="fa fa-search"></i></button>
+                  </div>
               </div>
               <div class="lognShop">
                   <div class="loginButtonWrapper">
@@ -35,15 +39,50 @@
                   </div>
                   <div class="shopCartWrapper">
                     <div class="cartShopicon">
-                        <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="carrito.html" class="cartS"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
                     <p class="counterProd">
                       <span>0</span>
                     </p>
                   </div>
               </div>
+              <div class="navToggleWrapper">
+                <div class="navButton">
+                    <button class="buttonNav">
+                      <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+              </div>
             </div>
         </div>
+    </div>
+    <!-- fin del nav -->
+    <!-- comienzo articulo -->
+    <div class="MainColNopaddRela">
+        <div class="colWrapper">
+            <div class="imgArticleWrapper">
+                <div class="imgArticleCont">
+                    <div class="imgProductCont">
+                      <img src="images/Notebook_Gamer_AORUS_KD_15.6.jpg" alt="" class="imgProduct">
+                    </div>
+                    <div class="imgThumbCarr">
+                        <!-- aca iria tipo carrusel -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="prodDescWrapper">
+                <div class="prodTitle">
+                    <h1>Notebook Gamer AORUS KD 15.6" Core I7 11800H 16GB (2x8GB) 512GB SSD NVMe RTX 3060 240Hz W11</h1>
+                </div>
+                <div class="prodPriceCont">
+                    <p>$340.000</p>
+                    <p>Precio especial</p>
+                </div>
+
+            </div>
+        </div>
+
     </div>
     <p>Soy el detalle de producto!</p>
   </body>
