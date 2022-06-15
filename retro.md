@@ -5,7 +5,7 @@
 - Mejoras en la comunicacion: La instalacion de Discord puede ser una buena idea porque no es necesario que creemos un grupo en otra platforma como podria ser WhatsApp la cual es un poco mas hostigante ver llena de mensajes diariamente, con discord podremos acceder en cualquier momento que nuestro tiempo lo permita. 
 
 ###Keep Doing:
-- Keep coding all time my buddies
+- Revisar dudas particulares repasando los materiales y preguntando a nuestros mismos compañeros para poder avanzar y aportar más. 
 
 ###Less Of:
 
