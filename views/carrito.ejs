@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <%- include('./partials/links.ejs') %>
+    <title>Carrito de Compra</title>
+</head>
+
+<body>
+
+  <!-- Partial de HEADER -->
+  <%- include('./partials/header.ejs') %>
+
+
+    <div class="container--carrito">
+
+
+      <div class="bienvenido--carrito">
+        <p class="mensaje--carrito">Bienvenido a su carrito de compras</p>
+
+        <i class="fa-solid fa-cart-plus"></i>
+      </div>
+
+      <div class="producto--carrito">
+        <div class="producto-carrito-img">
+          <img src="https://assets.nvidia.partners/images/png/asus-rog-g14.png" alt="laptop" class="imagen-producto" />
+        </div>
+
+        <div class="producto--carrito--mensaje--producto">
+          <div>
+            <p class="agregaste--carrito">Agregaste al carrito!</p>
+          </div>
+          <div>
+            <p class="nombre--carrito">ASUS ROG GA401QM-211.ZG14 notebook 1</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="div-comprar">
+        <a href="/">
+          <input class="boton-comprar" type="submit" name="" value="Comprar">
+        </a>
+      </div>
+
+
+
+    </div>
+
+
+
+    <!-- Partial de FOOTER -->
+
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>

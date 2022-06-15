@@ -24,6 +24,7 @@ BARRA DE NAVEGACION
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 2;
 }
 
 .nav {
@@ -87,11 +88,6 @@ pequenios */
   display: none;
 }
 
-.flechas {
-  display: flex;
-  flex-direction: column;
-}
-
 /* ----------------------------------------------------------------
 EMPIEZA EL MAIN
 ------------------------------------------------------------------ */
@@ -100,17 +96,103 @@ EMPIEZA EL MAIN
   font-family: "Changa", sans-serif;
   color: whitesmoke;
   text-transform: uppercase;
-  font-size: 20px;
-  margin: 0;
-  padding-top: 85px;
+  margin: 0 0 20px 0;
+  padding-top: 100px;
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 32px;
 }
 
 h1 {
   text-align: center;
+  padding-top: 15px;
   font-family: "Changa", sans-serif;
   color: whitesmoke;
   text-transform: uppercase;
-  padding-top: 15px;
+  margin: 0;
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.banner--home {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  max-width: 1280px;
+  border-radius: 10px;
+  height: 600px;
+  margin-bottom: 20px;
+
+  background-image: url();
+
+  background-size: 100% 100%;
+
+  /* animation-name: banner;
+  /* Le damos nombre a la animacion */
+  /* animation-duration: 10s;
+  animation-iteration-count: infinite;
+  La animacion durara 10 segundos y se repetira infinitas veces  */
+
+  animation: banner 10s infinite;
+  animation-direction: alternate-reverse;
+  /* Hace lo mismo que las lineas anteriores de animacion */
+}
+
+.flechas {
+  display: flex;
+  flex-direction: column;
+}
+
+.flechas-descripcion {
+  display: flex;
+  flex-direction: row;
+  border: solid 1px white;
+}
+@keyframes banner {
+  0%,
+  30% {
+    background-image: url(https://storage-asset.msi.com/global/picture/news/2019/nb/gs75-20190107-1.jpg);
+    opacity: 1;
+  }
+
+  31%,
+  34% {
+    opacity: 0.4;
+  }
+
+  35%,
+  65% {
+    background-image: url(https://www.tuexperto.com/wp-content/uploads/2022/05/predator-laptop-helios-300-spatiallabs-edition-nvidia-rtx-gpu-l-1200x640.jpg.webp);
+    opacity: 1;
+  }
+
+  66%,
+  69% {
+    opacity: 0.4;
+  }
+
+  70%,
+  100% {
+    opacity: 1;
+    background-image: url(https://mesajilgamer.com/wp-content/uploads/sites/7/2022/03/banner-home-MG-laptops-02.jpg);
+  }
+}
+
+.imagen-banner {
+  width: 100%;
+  height: 550px;
+}
+
+.productos-filtro {
+  display: flex;
+}
+
+.filtro-home {
+  width: 80%;
+  border: solid #76b900;
 }
 
 div.productos {
@@ -143,6 +225,7 @@ div.productos {
 
 div .articulo-main {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .flechas {
@@ -150,7 +233,21 @@ div .articulo-main {
   color: whitesmoke;
 }
 .fa-solid {
-  margin: 7px auto 7px auto;
+  width: 20%;
+  padding: 10px 0 0 0;
+}
+
+.texto-descripcion {
+  text-align: center;
+  padding-top: 10px;
+  font-family: "Changa", sans-serif;
+  color: whitesmoke;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .precio {
@@ -159,51 +256,264 @@ div .articulo-main {
   text-align: center;
   text-align: center;
   font-family: "Changa", sans-serif;
-  font-weight: bold;
 }
-/* .carrusel {
-  width: 90%;
-  max-width: 120em;
-  padding: 2em;
 
-  overflow: hidden;
-}
-.carrusel .grande {
-  width: 200%;
-  background-color: orange;
+  .flechas {
+    font-family: "Changa", sans-serif;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0 20px;
+    color: rgb(245 245 245);
+    font-size: 15px;
+  }
 
+ 
+
+  .precio {
+    color: whitesmoke;
+    font-size: 25px;
+    text-align: center;
+    text-align: center;
+    font-family: "Changa", sans-serif;
+    
+  }
+
+  .flechas--descripcion{
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
+  align-items: baseline;
+
 }
-.carrusel .img {
-  width: calc(100% / 2);
-  background-color: rgb(207, 255, 196);
+  .fa-solid  {
+    margin: 0px auto 0px auto;
+  }
+
+  .fa-bars{
+    font-size: 22px;
+  }
+
+  .banner--home {
+    width: 100%;
+  }
+
+.flechas--descripcion{
+  display: flex;
+  align-items: baseline;
 }
-.carrusel .puntos {
+
+.fa-solid {
+    margin: 0;
+    text-align: center;
+  }
+.fa-angle-right{
+  color: #76b900;
+}
+
+.descripcion-producto{
   width: 100%;
-  background-color: red;
-  padding: 1em;
-
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
 }
-.carrusel .punto {
-  width: 2em;
-  height: 2em;
-  background-color: blue;
-  margin: 1em;
-} */
+
+
+
+
+
+
+
+.fa-cart-shopping{
+  padding: 0;
+  margin: auto 4px auto auto;
+  width: 20%;
+}
+
+.precio {
+    font-size: 25px;
+    text-align: center;
+    text-align: center;
+    font-family: "Changa", sans-serif;
+  }
+
+.precio--boton{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.boton--carrito{
+  width: 65%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.boton--{
+  font-family: "Changa", sans-serif;
+  font-size: medium;
+  color: azure;
+  background-color: #76b900;
+  border-radius: 10px;
+  border: 0;
+  width: 80%;
+}
+
+
+
+
+
+
+
+.footer--home{
+  
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.pie-footer{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #000000;
+  justify-content: space-between;
+}
+
+.containers-footer{
+  background-color: #000000;
+  text-align: center;
+}
+
+.support{
+  font-family: "Changa", sans-serif;
+  color: rgb(121, 121, 121);
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 20px;
+
+}
+
+.fa-brands{
+  font-size: 25px;
+  color: rgb(121, 121, 121);
+}
+
+.copy{
+  color: rgb(121, 121, 121);
+  background-color: #000000;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.fa-facebook:hover {
+  color: #3b5998;
+
+}
+.fa-instagram:hover{
+  color: #8d0c8b;
+}
+.fa-twitter:hover{
+  color: #00acee;
+}
+
+
+
+
+
+/* ***************** CODIGO CSS ****************
+********************* CARRITO DE COMPRAS *********
+***************************************************/
+
+.container--carrito{
+  margin: auto;
+  width: 100%;
+  padding-top: 70px;
+  max-width: 1000px;
+  
+}
+
+.bienvenido--carrito{
+  
+  font-family: "Changa", sans-serif;
+  font-size: 20px;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.mensaje--carrito{
+  font-family: "Changa", sans-serif;
+  font-size: 46px;
+  color: whitesmoke;
+  margin-right: 5px;
+}
+
+.bienvenido--carrito i{
+  padding-top: 0;
+  font-size: 30px;
+}
+
+.producto--carrito{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
+  align-items: flex-start;
+  border: solid 1px rgb(42 42 42);
+  border-radius: 10px;
+}
+
+.producto-carrito-img{
+  width: 60%;
+  margin-left: 20px;
+}
+
+.producto--carrito--mensaje--producto{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-right: 4px;
+  margin-top: 25px;
+
+}
+
+.agregaste--carrito{
+  font-family: "Changa", sans-serif;
+  font-size: 24px;
+  color: whitesmoke;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.nombre--carrito{
+  font-family: "Changa", sans-serif;
+  font-size: 18px;
+  color: whitesmoke;
+}
+
+.div-comprar{
+  width: 100%;
+}
+
+.boton-comprar{
+  color: whitesmoke;
+  width: 100%;
+  height: 35px;
+  background: #76b900;  
+  border-radius: 10px;
+  margin-bottom: 50px;
+  border: 1px solid rgb(40, 40, 40)
+}
+
+
 
 /* ------------------------------------------------------------------
 *******************************MEDIA QUERY****************************
 --------------------------------------------------------------------- */
 @media only screen and (max-width: 768px) {
   body {
-    padding: 65px 20px 0;
+    
     width: 100%;
   }
 
@@ -248,9 +558,12 @@ div .articulo-main {
   }
 
   .nav-menu-item {
+    font-family: "Changa", sans-serif;
     line-height: 70px;
     text-transform: uppercase;
     width: max-content;
+    font-weight: 400;
+    
   }
 
   .nav-menu-link {
@@ -273,11 +586,27 @@ div .articulo-main {
 
   /* Hasta aca esta la barra de navegacion nav  */
 
-  .section-div-h1 {
-    padding: 0;
-    margin-top: 0px;
-    text-align: center;
-  }
+ .section-div-h1 {
+  font-family: "Changa", sans-serif;
+  color: whitesmoke;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  padding-top: 90px;
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 24px;
+}
+
+.productos-filtro {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px 0;
+}
+
+.mensaje{
+  margin: auto;
+  margin-bottom: 20px;
+}
 
   section.all-productos h1 {
     text-align: center;
@@ -285,7 +614,7 @@ div .articulo-main {
     color: whitesmoke;
     text-transform: uppercase;
     font-size: 30px;
-    margin: 0;
+    margin: 0 0 20px 0;
     padding: 0px 0px;
   }
 
@@ -312,23 +641,485 @@ div .articulo-main {
     justify-content: space-between;
     text-align: left;
     padding: 0 20px;
-    color: whitesmoke;
+    color: rgb(245 245 245);
     font-size: 15px;
   }
+
+ 
+
   .precio {
     color: whitesmoke;
     font-size: 25px;
     text-align: center;
     text-align: center;
     font-family: "Changa", sans-serif;
-    font-weight: bold;
+    
   }
-  .fa-solid {
-    margin: 3px auto 3px auto;
-  }
+
+  .flechas--descripcion{
+  display: flex;
+  align-items: baseline;
+
 }
+  .fa-solid  {
+    margin: 0px auto 0px auto;
+  }
+
+  .fa-bars{
+    font-size: 22px;
+  }
+
+  .banner--home {
+    width: 100%;
+  }
+
+.flechas--descripcion{
+  display: flex;
+  align-items: baseline;
+}
+
+.fa-solid {
+    margin: 0;
+    text-align: center;
+  }
+.fa-angle-right{
+  color: #76b900;
+}
+
+.descripcion-producto{
+  width: 100%;
+}
+
+
+
+
+.fa-cart-shopping{
+  padding: 0;
+  margin: auto 4px auto auto;
+  width: 20%;
+}
+
+.precio {
+    font-size: 25px;
+    text-align: center;
+    text-align: center;
+    font-family: "Changa", sans-serif;
+  }
+
+.precio--boton{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.boton--carrito{
+  width: 65%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.boton--{
+  font-family: "Changa", sans-serif;
+  font-size: medium;
+  color: azure;
+  background-color: #76b900;
+  border-radius: 10px;
+  border: 0;
+  width: 80%;
+}
+
+
+
+
+.footer--home{
+  
+  width: 100%;
+}
+
+.pie-footer{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #000000;
+  justify-content: space-between;
+}
+
+.containers-footer{
+  background-color: #000000;
+  
+  text-align: center;
+}
+
+.support{
+  font-family: "Changa", sans-serif;
+  color: rgb(121, 121, 121);
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+
+}
+
+.fa-brands{
+  font-size: 25px;
+  color: rgb(121, 121, 121);
+  margin-bottom: 10px;
+}
+
+.copy{
+  color: rgb(121, 121, 121);
+  background-color: #000000;
+  margin-right: 10px;
+}
+
+
+
+/* ***************** CODIGO CSS ****************
+********************* CARRITO DE COMPRAS *********
+***************************************************/
+
+.container--carrito{
+  margin: auto;
+  width: 95%;
+  padding-top: 70px;
+  
+}
+
+.bienvenido--carrito{
+  
+  font-family: "Changa", sans-serif;
+  font-size: 20px;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.mensaje--carrito{
+  font-family: "Changa", sans-serif;
+  font-size: 36px;
+  color: whitesmoke;
+  margin-right: 5px;
+}
+
+.bienvenido--carrito i{
+  padding-top: 0;
+  font-size: 30px;
+}
+
+.producto--carrito{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
+  align-items: flex-start;
+  border: solid 1px rgb(42 42 42);
+  border-radius: 10px;
+}
+
+.producto-carrito-img{
+  width: 60%;
+  margin-left: 4px;
+}
+
+.producto--carrito--mensaje--producto{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-right: 4px;
+  margin-top: 25px;
+
+}
+
+.agregaste--carrito{
+  font-family: "Changa", sans-serif;
+  font-size: 24px;
+  color: whitesmoke;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.nombre--carrito{
+  font-family: "Changa", sans-serif;
+  font-size: 18px;
+  color: whitesmoke;
+}
+
+.div-comprar{
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.boton-comprar{
+  color: whitesmoke;
+  width: 100%;
+  height: 35px;
+  background: #76b900;  
+  border-radius: 10px;
+  margin-bottom: 20px;
+    border: 1px solid rgb(40, 40, 40)
+}
+
+
+
+
+
+
+}
+
+@media only screen and (max-width: 425px) {
+
+  body {
+    width: 100%;
+   }
+
+  .banner--home{
+    display: none;
+
+  }
+
+  div .articulo-main {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    text-align: center;
+    background-color: #101010;
+    margin: 0 auto 30px auto;
+  }
+
+.section-div-h1{
+      font-family: "Changa", sans-serif;
+    color: rgb(245 245 245);
+    text-transform: uppercase;
+    margin: 0 0 25px 0;
+    padding-top: 90px;
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 24px;
+    border-bottom: solid rgb(154 205 50);
+}
+  section.all-productos h1 {
+    text-align: center;
+    font-family: "Changa", sans-serif;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 0 0 20px 0;
+    padding: 0px 0px 20px 0;
+    border-bottom: solid #76b900;
+  }
+
+  .filtro-home {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 5px;
+  border: solid #76b900;
+}
+
+.productos-filtro {
+  display: flex;
+  flex-direction: column;
+}
+
+.flechas--descripcion{
+  display: flex;
+  align-items: baseline;
+}
+
+.fa-solid {
+    margin: 0;
+    text-align: center;
+  }
+.fa-angle-right{
+  color: #76b900;
+}
+
+.descripcion-producto{
+  width: 100%;
+}
+
+.fa-cart-shopping{
+  padding: 0;
+  margin: auto 4px auto auto;
+  width: 20%;
+}
+
+.precio {
+    font-size: 25px;
+    text-align: center;
+    text-align: center;
+    font-family: "Changa", sans-serif;
+  }
+
+.precio--boton{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.boton--carrito{
+  width: 65%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.boton--{
+  font-family: "Changa", sans-serif;
+  font-size: medium;
+  color: azure;
+  background-color: #76b900;
+  border-radius: 10px;
+  border: 0;
+  width: 80%;
+}
+
+.footer--home{
+  margin-top: 20px;
+  width: 100%;
+  position: relative;
+  
+}
+
+.pie-footer{
+  width: 100%;
+  display: flex;
+  font-size: 10px;
+}
+
+.containers-footer{
+  background-color: #000000;
+  margin: 0 8px;
+  text-align: center;
+}
+
+.support{
+  font-family: "Changa", sans-serif;
+  color: rgb(121, 121, 121);
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-left: 1px;
+
+}
+
+.fa-brands{
+  font-size: 25px;
+  color: rgb(121, 121, 121);
+  margin-bottom: 10px;
+}
+
+.copy{
+  color: rgb(121, 121, 121);
+  background-color: #000000;
+  margin-right: 1px;
+  text-align: right;
+  font-size: 15px;
+}
+
+/* ***************** CODIGO CSS ****************
+********************* CARRITO DE COMPRAS *********
+***************************************************/
+
+.container--carrito{
+  margin: auto;
+  width: 95%;
+  padding-top: 70px;
+  
+}
+
+.bienvenido--carrito{
+  
+  font-family: "Changa", sans-serif;
+  font-size: 20px;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.mensaje--carrito{
+  font-family: "Changa", sans-serif;
+  font-size: 29px;
+  color: whitesmoke;
+  margin-right: 5px;
+}
+
+.bienvenido--carrito i{
+  padding-top: 0;
+  font-size: 30px;
+}
+
+.producto--carrito{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
+  align-items: flex-start;
+  border: solid 1px rgb(42 42 42);
+  border-radius: 10px;
+}
+
+.producto-carrito-img{
+  width: 60%;
+  margin-left: 4px;
+}
+
+.producto--carrito--mensaje--producto{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-right: 4px;
+
+}
+
+.agregaste--carrito{
+  font-family: "Changa", sans-serif;
+  font-size: 15px;
+  color: whitesmoke;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.nombre--carrito{
+  font-family: "Changa", sans-serif;
+  font-size: 12px;
+  color: whitesmoke;
+}
+
+.div-comprar{
+  width: 100%;
+}
+
+.boton-comprar{
+    color: whitesmoke;
+  width: 100%;
+  height: 35px;
+  background: #76b900;  
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+}
+
+
+
+/* .fa-cart-shopping-fast{
+  width: 20%;
+} */
+
+
+
 .mensaje {
   color: #76b900;
   font-size: 25px;
   text-align: center;
 }
+

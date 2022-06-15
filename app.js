@@ -1,35 +1,41 @@
-const express = require("express");
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
-const path = require("path");
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 
-const app = express();
+var app = express();
 
-const port = 3020;
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-app.use(express.static("public"));
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(port, () => {
-  console.log(`Server Up! ${port}`);
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
 });
 
-app.use(express.static(path.resolve("./views/index.html")));
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-app.get("/", (req, res) => {
-  res.sendFile(path.resolve("./views/index.html"));
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
 });
 
-app.get("/carrito", (re, res) => {
-  res.sendFile(path.resolve("./views/carrito.html"));
-});
-
-app.get("/login", (req, res) => {
-  res.sendFile(path.resolve("./views/login.html"));
-});
-
-app.get("/productDetail", (req, res) => {
-  res.sendFile(path.resolve("./views/productDetail.html"));
-});
-
-app.get("/registro", (req, res) => {
-  res.sendFile(path.resolve("./views/registro.html"));
-});
+module.exports = app;
