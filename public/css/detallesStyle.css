@@ -12,75 +12,146 @@
   }
 
 /*👉NAV👈*/
-div .mainHead, .navMenuWrapper {
-    background-color: black;
-    width: 100%;
-    padding-bottom: 10px;
-}
-
-.logoImg {
-  padding: 5px;
-}
-
-.navMenuWrapper {
-    margin-bottom: 10px;
-    padding: 0px 7.5px;
-    text-align: center;
-}
-
-
-
-.searchBar {
-  margin-bottom: 10px;
-}
-
-.searchBarWrapper {
-  padding-bottom: 1.34em;
-}
-
-.searchButton {
-    height: 29px;
-    width: 29px;
-    border: none;
-    border-radius: 2px;
-}
-
-:placeholder-shown {
-  padding: 5px;
-}
-
-.lognShop {
+.header {
+  background-color: black;
+  height: 80px;
+  position: fixed;
   width: 100%;
-  display: inline-flex;
-  justify-content: space-evenly;
-
+  top: 0;
+  left: 0;
 }
 
-.buttonLogin {
-  background-color: #7289DA;
-  border-radius: 4px;
-  padding: 0px 15px;
-  height: 25px;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 992px;
+  margin: 0 auto;
 }
 
-.cartS {
-  color: whitesmoke;
+.nav-link {
+  color: rgb(121, 121, 121);
+  text-decoration: none;
 }
 
-.buttonNav {
+.logo {
+  font-family: "Akshar", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  padding: 0 40px;
+  line-height: 80px;
+}
+
+.fa-laptop-file {
+  position: absolute;
+  line-height: 80px;
+  margin: 0 10px;
+}
+
+.nav-menu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.nav-menu-item {
+  font-size: 15px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.nav-menu-link {
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+
+.nav-menu-link:hover {
+  background-color: #2c2c2c;
+  transition: 0.8s;
+}
+
+.nav-toggle {
   color: whitesmoke;
   background: none;
   border: none;
   font-size: 15px;
   padding: 0 20px;
   line-height: 25px;
-  padding-bottom: 5px;
+  display: none;
 }
 
-.contenidoWrapper {
-  color: #fff!important; 
-  display: inline-block;
+@media (max-width: 768px) {
+  body {
+    padding: 90px 20px 0;
+  }
+
+  .header {
+    height: 60px;
+  }
+
+  .logo {
+    font-family: "Akshar", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    padding: 0 10px;
+    line-height: 60px;
+  }
+
+  .fa-laptop-file {
+    position: absolute;
+    font-size: 20px;
+    line-height: 70px;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 20px;
+    background-color: #2c2c2c;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    /* las dos siguientes lineas se usan dentro del menu de 
+    hamburguesa para que en caso que se necesite, podamos hacer scroll en 
+    smartphones pequenios (SCROLL MENU HAMBURGUESA) */
+    height: calc(100% - 60px);
+    overflow-y: auto;
+
+    left: 100%;
+    transition: left 0.5s;
+  }
+
+  .nav-menu-item {
+    line-height: 70px;
+    text-transform: uppercase;
+    width: max-content;
+  }
+
+  .nav-menu-link {
+    padding: 8px 10px;
+    border-radius: 5px;
+  }
+
+  .nav-menu-link:hover {
+    background-color: #000000;
+    transition: 0.8s;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu_visible {
+    left: 0%;
+  }
 }
+
+/* Hasta aca esta la barra de navegacion nav  */
 
 /*👉fin nav👈*/
 /*👉comienzo article👈*/

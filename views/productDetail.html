@@ -10,52 +10,35 @@
       crossorigin="anonymous"></script>
     <title>Compumundo Hypermegared</title>
   </head>
-  <body>
-    <div class="wrapperMainHead">
-        <div class="mainHead">
-            <div class="row">
-              <a href="views/index.html" class="logoWrapper">
-                  <img src="images/logoCHMR.svg" alt="logo CHMR"  class="logoImg">
-              </a>
-
-            </div>
-        </div>
-        <div class="navMenuWrapper">
-            <div class="menuToolBar">
-              <div class="searchBar">
-                  <div class="searchBarWrapper">
-                    <input type="text" placeholder="Buscar...">
-                    <button type="submit" class="searchButton"><i class="fa fa-search"></i></button>
-                  </div>
-              </div>
-              <div class="lognShop">
-                  <div class="loginButtonWrapper">
-                     <button class="buttonLogin">
-                        <span class="contenidoWrapper">
-                          <i class="fas fa-user-circle"></i>
-                            Iniciar Sesión
-                        </span>
-                     </button> 
-                  </div>
-                  <div class="shopCartWrapper">
-                    <div class="cartShopicon">
-                        <a href="carrito.html" class="cartS"><i class="fa-solid fa-cart-shopping"></i></a>
-                    </div>
-                    <p class="counterProd">
-                      <span>0</span>
-                    </p>
-                  </div>
-              </div>
-              <div class="navToggleWrapper">
-                <div class="navButton">
-                    <button class="buttonNav">
-                      <i class="fa-solid fa-bars"></i>
-                    </button>
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
+  <header class="header">
+      <nav class="nav">
+        <a href="#" class="logo nav-link nav-menu-item"
+          >COMPUMUNDOHYPERMEGARED <i class="fa-solid fa-laptop-file"></i>
+        </a>
+        <!-- Aqui ponemos el logo de fontawesome, creando un boton con una clase nav-toggle que refiere a menu hamburguesa -->
+        <button class="nav-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-menu">
+          <li class="nav-menu-item">
+            <a href="/login" class="nav-menu-link nav-link">Login</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="/registro" class="nav-menu-link nav-link">Registro</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="/productDetail" class="nav-menu-link nav-link"
+              >Product Detail</a
+            >
+          </li>
+          <li class="nav-menu-item">
+            <a href="/carrito" class="nav-menu-link nav-link"
+              >Carrito de compras</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
     <!-- fin del nav -->
     <!-- comienzo articulo -->
     <div class="MainColNopaddRela">
