@@ -13,7 +13,46 @@
   <!-- Partial de HEADER -->
   <%- include('./partials/header.ejs') %>
 
-    <p>Soy el registro</p>
+    <p>
+      <a class="pagina_inicio" href="/index.html">Inicio</a>
+    </p>
+    <section>
+      <h1>Ingresar</h1><br>
+      <article class="j_formulario">
+    
+    
+        <form action="/users.html" method="post">
+    
+          <div>
+            <label for="j_usuario">Usuario</label>
+            <input class="j_entradas" type="text" name="j_usuario" placeholder="Genera tu usuario" required>
+          </div>
+    
+          <div>
+            <label for="j_nombre">Correo</label>
+            <input class="j_entradas" type="text" name="User" placeholder="usuario@ejemplo.com" required>
+          </div>
+          <div>
+            <label for="fecha_nacimiento">Fecha de nacimiento</label>
+            <input class="j_entradas" type="date" name="fecha_nacimiento" value="2004-01-01" min="1950-01-01"
+              max="2010-01-01" required>
+          </div>
+          <div>
+            <label for="Contraseña">Contraseña</label>
+            <input class="j_entradas" type="password" name="Contraseña" required>
+          </div>
+          <div>
+            <label for="Contraseña">Confirmar contraseña</label>
+            <input class="j_entradas" type="password" name="Contraseña" required>
+          </div>
+    
+          <div>
+            <button class="j_boton_ingresar" action="submit">Continuar</button>
+          </div>
+      </article>
+    
+      </form>
+    </section>
 
     <!-- Partial de FOOTER -->
 

@@ -9,9 +9,44 @@
     <title>Login</title>
 </head>
 
-<body>
-  <!-- Partial de HEADER -->
+<!-- Partial de HEADER -->
+<body class="cuentas">
   <%- include('./partials/header.ejs') %>
+
+  <p>
+    <a class="pagina_inicio" href="/index.html">Inicio</a>
+  </p>
+  <section class="j_contenedor_formulario">
+    <h1>Ingresar</h1><br>
+    <article class="j_formulario">
+  
+  
+      <form action="/ingreso.html" method="post">
+  
+        <div>
+          <label for="Email">Usuario</label>
+          <input class="j_entradas" type="text" name="Email" placeholder="usuario@ejemplo.com" required>
+        </div>
+  
+        <div>
+          <label for="Contraseña">Contraseña</label>
+          <input class="j_entradas" type="password" name="Contraseña" required>
+        </div>
+        <div class="j_rec_pass">
+          <label id="rp2" for="rec_Usuario">Guardar contraseña</label>
+          <input id="rp1" type="checkbox" name="rec_Usuario" value="Recordar">
+        </div>
+        <div>
+          <button class="j_boton_ingresar" action="submit">Continuar</button>
+        </div>
+    </article>
+    <div>
+      ¿Aun no tienes una cuenta?
+      <a href="registro.html">Creá una aquí</a>
+    </div>
+  
+    </form>
+  </section>
 
     <!-- Partial de FOOTER -->
 
