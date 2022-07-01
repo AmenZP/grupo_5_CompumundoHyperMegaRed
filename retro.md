@@ -43,3 +43,18 @@ Sprint 3:
 -Dejar de lado frustraciones.
 
 /////////////////////////////////////////////////////********************************///////////////////////////////////////////////
+
+Sprint 4:
+###Start Doing: 
+-Seguir con las tareas atrasadas. Tratar de ponernos al día.
+
+###More Of:
+-Fortalecer la comunicación.
+
+###Keep Doing:
+-
+
+###Less Of:
+-No dejar pasar mucho tiempo sin tener meetings.
+
+/////////////////////////////////////////////////////********************************///////////////////////////////////////////////
