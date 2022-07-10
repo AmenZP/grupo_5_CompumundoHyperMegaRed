@@ -18,6 +18,14 @@ const controller = {
   registro: function (req, res) {
     res.render("registro", {});
   },
+
+  productEdit: function (req, res) {
+    res.render("productEdit");
+  },
+
+  productAdd: function (req, res) {
+    res.render("productAdd");
+  },
 };
 
 module.exports = controller;

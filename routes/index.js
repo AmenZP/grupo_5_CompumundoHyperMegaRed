@@ -14,4 +14,8 @@ router.get("/login", controller.login);
 
 router.get("/registro", controller.registro);
 
+router.get("/productEdit", controller.productEdit);
+
+router.get("/productAdd", controller.productAdd);
+
 module.exports = router;
