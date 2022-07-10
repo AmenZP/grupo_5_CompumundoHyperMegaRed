@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <%- include('./partials/links.ejs') %>
+    <title>Login</title>
+</head>
+
+<!-- Partial de HEADER -->
+<body>
+  <div class="cont prod-wrap">
+    <div class="row">
+      <div class="col-12">
+        <h2>Publicá tu producto</h2>	
+      </div>
+    </div>
+  
+    <div class="col-12">
+      <form action="/products/create" method="POST">
+        <div class="row prod-det">
+          <div class="col=12 col-md-6">
+            <label for="name" class="form-label">Nombre del producto</label>
+            <input type="text" id="name" name="name" placeholder="Ej: Notebook HP" class="form-input">
+          </div>
+          <div class="col=12 col-md-6">
+            <label for="price" class="form-label">Precio del producto</label>
+            <input type="text" id="price" name="price" placeholder="Ej: 200" class="form-input">
+          </div>
+          <div class="col=12 col-md-6">
+            <label for="name" class="form-label">Color</label>
+            <input type="text" id="color" name="color" placeholder="Ej: Negro" class="form-input">
+          </div>
+          <div class="col=12 col-md-6">
+            <label for="tipocpu" class="form-label">Tipo de CPU</label>
+            <select name="tipocpu" id="tipocpu" class="form-input">
+              <option value="">Intel</option>
+              <option value="">Amd</option>
+          </div>
+          <div class="col=12 col-md-6">
+            <label for="modelocpu" class="form-label">Modelo de CPU</label>
+            <input type="text" id="modelocpu" name="modelocpu" placeholder="Ej:4460" class="form-input">
+          </div>
+          <div class="col=12 col-md-6">
+            <label for="fliacpu" class="form-label">Familia de CPU</label>
+            <input type="text" id="fliacpu" name="fliacpu" placeholder="Ej:Intel Core i7" class="form-input">
+          </div>
+          <div class="col=12 col-md-6">
+            <label for="tipogpu" class="form-label">Tipo de GPU</label>
+            <select name="tipogpu" id="tipogpu" class="form-input">
+              <option value="">nVidia</option>
+              <option value="">Radeon</option>
+          </div>
+          <div class="col=12 col-md-6">
+            <label for="memogpu" class="form-label">Memoria de GPU</label>
+            <input type="text" id="memogpu" name="memogpu" placeholder="Ej:6gb" class="form-input">
+          </div>
+          <div class="col=12 col-md-6">
+            <label for="modelogpu" class="form-label">Modelo de GPU</label>
+            <input type="text" id="modelogpu" name="modelogpu" placeholder="Ej:nVidia GTX1080" class="form-input">
+          </div>
+          <div class="col=12 col-md-6">
+            <label for="tipo" class="form-label">Tipo</label>
+            <input type="text" id="tipo" name="tipo" placeholder="Ej:Notebook" class="form-input">
+          </div>
+          <div class="col=12 col-md-6">
+            <label for="bateria" class="form-label">Bateria Extraible</label>
+            <select name="bateria" id="bateria" class="form-input">
+              <option value="">No</option>
+              <option value="">Si</option>
+              <option value="">No Tiene</option>
+          </div>
+          <div class="col=12 col-md-6">
+            <label for="lectorhuella" class="form-label">Lector de Huellas</label>
+            <select name="lectorhuella" id="lectorhuella" class="form-input">
+              <option value="">Si</option>
+              <option value="">No</option>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="post-now-button">Guardar producto</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+
+
+
+
+<!-- Partial de FOOTER -->
+
+<%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
