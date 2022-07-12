@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <%- include('./partials/links.ejs') %>
         <title>Editar producto</title>
 </head>
@@ -13,13 +11,65 @@
     <!-- Partial de HEADER -->
     <%- include('./partials/header.ejs') %>
 
+        <div class="container-edit">
+
+            <div class="estas-editando">
+                <h2 class="estas-editanto-texto">Estas editando: </h2>
+            </div>
+
+            <div class="formulario-edit">
+
+                <form action="#" method="POST">
+
+                    <div class="formulario-edit-1">
+
+                        <div class="form-edit-name">
+
+                            <label for="name" class="form-label">Nombre de producto</label>
+                            <input type="text" name="name" id="name" placeholder="Nombre de producto">
+
+                        </div>
+
+                        <div class="form-edit-name">
+
+                            <label for="price" class="form-label">Precio </label>
+                            <input type="text" name="price" id="price" placeholder="Precio de producto">
+
+                        </div>
+
+                        <div class="form-edit-name">
+
+                            <label for="name" class="form-label">Nombre de producto</label>
+                            <input type="text" name="bname" id="name" placeholder="Nombre de producto">
+
+                        </div>
+
+                        <div class="form-edit-name">
+
+                            <label for="name" class="form-label">Nombre de producto</label>
+                            <input type="text" name="bname" id="name" placeholder="Nombre de producto">
+
+                        </div>
+
+                        <div class="divForms">
+                            <button class="j_boton_ingresar" action="submit">Continuar</button>
+                        </div>
 
 
 
+                    </div>
 
-        <!-- Partial de FOOTER -->
 
-        <%- include('./partials/footer.ejs') %>
+
+                </form>
+
+            </div>
+        </div>
+
+        <%- include('./partials/script.ejs') %>
+
+
+
 </body>
 
 </html>

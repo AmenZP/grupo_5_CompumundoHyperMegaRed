@@ -26,6 +26,10 @@ const controller = {
   productAdd: function (req, res) {
     res.render("productAdd");
   },
+
+  editarUsuario: function (req, res) {
+    res.render("editarUsuario");
+  },
 };
 
 module.exports = controller;

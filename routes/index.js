@@ -18,4 +18,6 @@ router.get("/productEdit", controller.productEdit);
 
 router.get("/productAdd", controller.productAdd);
 
+router.get("/editarUsuario", controller.editarUsuario);
+
 module.exports = router;

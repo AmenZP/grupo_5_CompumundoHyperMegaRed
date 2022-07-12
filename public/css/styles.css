@@ -1661,8 +1661,131 @@ section {
 
 }
 
+/* ****************** EDITAR PRODUCTOS ***************
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+
+*/
+
+.estas-editanto-texto{
+  padding-top: 100px;
+  color: whitesmoke;
+  font-family: "Changa", sans-serif;
+  font-size: 20px;
+  padding-left: 5px;
+  font-weight: 400;
+}
+
+.formulario-edit{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-edit-name{
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px;
+}
+
+.container-edit{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form-label{
+   color: whitesmoke;
+  font-family: "Changa", sans-serif;
+  font-size: 20px;
+  padding-left: 5px;
+  font-weight: 400;
+
+}
 
 
+
+/* ****************** AGREGAR PRODUCTOS ***************
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+
+*/
+
+.prod-det{
+  padding-top: 80px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.col-md-6{
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input{
+  width: 250px;
+}
+
+#tipocpu{
+  margin-bottom: 8px;
+}
+
+#tipogpu{
+  margin-bottom: 8px;
+}
+
+/* ****************** EDITAR USUARIO ***************
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+
+*/
+.form-edit-usuarios{
+  display: inline-block;
+}
+
+.container-editar-usuario{
+  display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titulo-edita-usuario{
+  color: whitesmoke;
+  font-family: "Changa", sans-serif;
+  font-size: 20px;
+  padding-left: 5px;
+  font-weight: 400;
+  padding-top: 80px;
+
+}
+
+.f-edit-usuarios{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+}
+
+.form-input-edit{
+  width: 300px;
+}
 }
 
 /* .fa-cart-shopping-fast{
