@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <%- include('./partials/links.ejs') %>
+
+</head>
+
+<!-- Partial de HEADER -->
+<%- include('./partials/header.ejs') %>
+
+    <body>
+
+        <div class="container-editar-usuario">
+
+            <div class="titulo-edita-usuario">Edita tu Usuario</div>
+
+            <form action="/users/edit" method="POST">
+
+                <div class="form-edit-usuarios">
+
+                    <div class="f-edit-usuarios">
+
+                        <label for="username" class="form-label">Nombre de usuario</label>
+                        <input type="text" id="username" name="username" placeholder="Colocá tu nombre de usuario nuevo"
+                            class="form-input-edit">
+
+                    </div>
+
+                    <div class="f-edit-usuarios">
+
+                        <label for="emailedit" class="form-label">Editá tu Email</label>
+                        <input type="text" id="emailedit" name="emailedit"
+                            placeholder="Colocá tu nombre de usuario nuevo" class="form-input-edit">
+
+                    </div>
+
+
+                    <div class="f-edit-usuarios">
+
+                        <label for="passedit" class="form-label">Editá tu contraseña</label>
+                        <input type="password" id="passedit" name="passedit"
+                            placeholder="Colocá tu nombre de usuario nuevo" class="form-input-edit">
+
+                    </div>
+
+                    <div class="f-edit-usuarios">
+
+                        <label for="emaileditconfirm" class="form-label">Confirmá tu contraseña</label>
+                        <input type="text" id="emaileditconfirm" name="emaileditconfirm"
+                            placeholder="Colocá tu nombre de usuario nuevo" class="form-input-edit">
+
+                    </div>
+
+                    <div class="divForms">
+                        <button class="j_boton_ingresar" action="submit">Continuar</button>
+                    </div>
+
+
+                </div>
+            </form>
+        </div>
+
+
+
+    </body>
+
+
+    <%- include('./partials/script.ejs') %>
+        <%- include('./partials/footer.ejs') %>
