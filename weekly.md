@@ -18,3 +18,5 @@ Ian: Sin comentario.
 
 Weekly 3:
 El equipo pasa a ser de dos integrantes. Andrés y Carlos siguen con el proyecto con la ayuda del profesor Jonathan. 
+
+Excelente
