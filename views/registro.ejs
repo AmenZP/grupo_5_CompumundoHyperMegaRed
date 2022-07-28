@@ -19,7 +19,7 @@
       <article class="j_formulario">
     
     
-        <form action="/users/register" method="POST">
+        <form action="/views/registro.ejs" method="POST">
 
           <div class="divForms-1">
             <h1>Crea tu cuenta aca</h1>
@@ -32,7 +32,7 @@
     
           <div class="divForms">
             <label for="email">Correo electronico</label>
-            <input class="j_entradas" type="text" name="email" placeholder="usuario@ejemplo.com" required>
+            <input class="j_entradas" type="email" name="email" placeholder="usuario@ejemplo.com" required>
           </div>
           <!-- <div class="divForms">
             <label for="fecha_nacimiento">Fecha de nacimiento</label>
@@ -49,7 +49,7 @@
           </div>
     
           <div class="divForms">
-            <button class="j_boton_ingresar" action="submit">Continuar</button>
+            <button type="submit" class="j_boton_ingresar" action="submit">Continuar</button>
           </div>
       </article>
     

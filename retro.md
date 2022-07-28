@@ -58,3 +58,19 @@ Sprint 4:
 -No dejar pasar mucho tiempo sin tener meetings.
 
 /////////////////////////////////////////////////////********************************///////////////////////////////////////////////
+
+Sprint 5:
+###Start Doing: 
+
+- La dedicacion es un tema fundamntal para el desarrollo de cualquier proyecto en el que nos encontramos trabajando. Aunque no he desistido, realmente debo decir que he tenido menos tiempo este ultimo mes que pasó para dedicarme a mi proyecto, sin embargo estoy en el proceso de arreglar la organizacion de mi tiempo y lograr ponerme al dia con los objetivos.
+
+###More Of:
+-Fortalecer los conceptos donde tengo mas falencias para poder avanzar con prontitud.
+
+###Keep Doing:
+- A pesar de las dificultades que se han presentado, el Keep Doing de ésta ocasión trata de la perseverancia, el seguir estudiando y aprendiendo es el unico camino para poder terminar lo que ya se empezó
+
+###Less Of:
+- Dejarse atrasar en los conceptos vistos en clase para aplicarlos en el proyecto, la falta de tiempo, las exigentes jornadas laborales  y la complejidad del aprendizaje son factores clave para quedarse atrás en las consignas. Se debe pensar menos en el cansancio o en la frustacion de no entender muchas cosas, repetir, repetir y volver repetir es lo unico que pienso que me puede ayudar a seguir progresando en cosas que no tengo claras. 
+
+
