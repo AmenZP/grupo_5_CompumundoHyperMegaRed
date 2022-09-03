@@ -2,6 +2,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+  background: #101010;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background: #76b900;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #99f101;
 }
 
 .container {
@@ -26,6 +46,8 @@ BARRA DE NAVEGACION
   left: 0;
   z-index: 2;
 }
+
+
 
 .nav {
   display: flex;
@@ -57,6 +79,8 @@ BARRA DE NAVEGACION
   display: flex;
   margin-right: 40px;
   list-style: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-menu-item {
@@ -66,6 +90,8 @@ BARRA DE NAVEGACION
   text-transform: uppercase;
   width: max-content;
 }
+
+
 
 .nav-menu-link {
   padding: 8px 10px;
@@ -93,6 +119,13 @@ pequenios */
   padding: 0 20px;
   line-height: 25px;
   display: none;
+}
+
+.contenedor-imagen-profile{
+  width: 45px;
+  height: 45px;
+  border-radius: 25%;
+  
 }
 
 /* ----------------------------------------------------------------
@@ -650,6 +683,8 @@ h1 {
   justify-content: center;
   margin: 12px 0px;
   text-align: center;
+  padding: 8px 0;
+  border-radius: 5px;
 }
 
 .j_boton_ingresar{
@@ -713,6 +748,18 @@ h1 {
 
 .creaUna{
   color: #76b900;
+}
+
+.imagen-perfil{
+  max-width: 380px;
+  max-height: 280px;
+  border-radius: 50px;
+}
+
+.boton-perfil{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 section {
@@ -986,7 +1033,9 @@ section {
   margin-right: 10px;
 }
 
-
+.contenedor-imagen-profile{
+  display: none; 
+}
 
 /* ***************** CODIGO CSS ****************
 ********************* CARRITO DE COMPRAS *********
@@ -1409,6 +1458,10 @@ section {
   font-size: 15px;
 }
 
+.contenedor-imagen-profile{
+  display: none; 
+}
+
 /* ***************** CODIGO CSS ****************
 ********************* CARRITO DE COMPRAS *********
 ***************************************************/
@@ -1799,6 +1852,7 @@ section {
   font-size: 25px;
   text-align: center;
 }
+
 
 
 

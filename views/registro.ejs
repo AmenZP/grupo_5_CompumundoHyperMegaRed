@@ -14,54 +14,80 @@
   <%- include('./partials/header.ejs') %>
 
   
-
-    <section>
-      <article class="j_formulario">
-    
-    
-        <form action="/users/register" method="POST">
-
-          <div class="divForms-1">
-            <h1>Crea tu cuenta aca</h1>
+  <section>
+    <article class="j_formulario">
+      <form action="/users/register" method="POST" enctype="multipart/form-data">
+      
+        <div class="divForms-1">
+          <h1>Crea tu cuenta aca</h1>
+        </div>
+        <% if (locals.errors && errors.email) { %>
+          <div class="flechas">
+            <%= errors.email.msg %>
           </div>
-          
+          <% } %>
+            </div>
+        
+            <% const isErrorsArray=Array.isArray(locals.errors) %>
+              <% if (isErrorsArray && locals.errors) { errors.forEach ( error=> { %>
+                <p class="flechas">
+                  <%= error.msg %>
+                </p>
+                <% }) } %>
+
           <div class="divForms">
-            <label for="name">Usuario</label>
-            <input class="j_entradas" type="text" name="name" placeholder="Escribi tu usuario aqui" required>
+            <label for="name">Nombre</label>
+            <input class="j_entradas" type="text" name="name" placeholder="Escribi tu nombre aqui"
+              value="<%= locals.old && old.name ? old.name : '' %>">
+            </div>
+            
+            <div class="divForms">
+              <label for="lastname">Apellido</label>
+              <input class="j_entradas" type="text" name="lastname" placeholder="Escribi tu apellido aqui"
+                value="<%= locals.old && old.lastname ? old.lastname : '' %>">
           </div>
-    
+
           <div class="divForms">
             <label for="email">Correo electronico</label>
-            <input class="j_entradas" type="text" name="email" placeholder="usuario@ejemplo.com" required>
+            <input class="j_entradas" type="email" name="email" placeholder="usuario@ejemplo.com"
+              value="<%= locals.old && old.email ? old.email : '' %>">
+            
+            
+            <div class="divForms">
+              <label for="Contraseña">Contraseña</label>
+              <input class="j_entradas" type="password" name="password">
           </div>
-          <!-- <div class="divForms">
-            <label for="fecha_nacimiento">Fecha de nacimiento</label>
-            <input class="j_entradas" type="date" name="fecha_nacimiento" value="2004-01-01" min="1950-01-01"
-              max="2010-01-01" required>
-          </div> -->
+
+
           <div class="divForms">
-            <label for="Contraseña">Contraseña</label>
-            <input class="j_entradas" type="password" name="password" required>
+            <label for="ImagenUsuario">Imagen de Perfil</label>
+            <input class="j_entradas" type="file" name="imagenUsuario">
+            </div>
+            
+            <div class="divForms">
+              <label for="categoriaUsuario">Seleccione tipo de usuario</label>
+              <select name="categoriaUsuario" id="categoriaUsuario">
+                <!-- Validacion de opciones Select -->
+                <option value="Comprador" <%=locals.old && old.category==='Comprador' ? 'selected' : ' ' %>>Comprador</option>
+                <option value="Vendedor" <%=locals.old && old.category==='Vendedor' ? 'selected' : ' ' %>>Vendedor</option>
+              </select>
           </div>
-          <div class="divForms">
-            <label for="Contraseña">Confirma tu contraseña</label>
-            <input class="j_entradas" type="pass_confirm" name="pass_confirm" required>
-          </div>
-    
+
           <div class="divForms">
             <button class="j_boton_ingresar" action="submit">Continuar</button>
           </div>
+
       </article>
-    
+
       </form>
     </section>
-    
+
     <%- include('./partials/script.ejs') %>
 
 
-    <!-- Partial de FOOTER -->
+      <!-- Partial de FOOTER -->
 
-    <%- include('./partials/footer.ejs') %>
+      <%- include('./partials/footer.ejs') %>
 </body>
 
 </html>

@@ -1,16 +1,74 @@
 [
  {
-  "id": 1,
-  "name": "Andres",
-  "password": "camilo",
-  "email": "mail@mail.com",
-  "pass_confirm": "camilo"
+  "id": 40,
+  "name": "Lisa",
+  "lastname": "Mona",
+  "email": "Monalisa@email.com",
+  "password": "$2a$10$PiiDM4hOA/o0tqyy2v/q5uovWLyNqLUm7nozxroRwFb2KUaszhSBu",
+  "categoriaUsuario": "Comprador",
+  "image": "imgUser-1661200151956.jpg"
  },
  {
-  "id": 2,
-  "name": "Andres",
-  "email": "Andres@digital.com",
-  "password": "asdasd",
-  "pass_confirm": "asdasd"
+  "id": 41,
+  "name": "Marta",
+  "lastname": "Middleware",
+  "email": "CorreoDefinitivo@gmail.com",
+  "password": "$2a$10$bWf/nVEk7qGaQSct.ksOg.ZMeslkRH7DSR4Hd/OT4ceLhD/gztOgm",
+  "categoriaUsuario": "Comprador",
+  "image": "imgUser-1661206394714.jpg"
+ },
+ {
+  "id": 42,
+  "name": "Prueba Validator",
+  "lastname": "Middleware",
+  "email": "Pirobo@gmail.com",
+  "password": "$2b$10$Pxf0NEeYXvzTC3mYLh/8FO7TMD24VdpspD3jW6HvywUyaNUPnNpLe",
+  "categoriaUsuario": "Comprador",
+  "image": "imgUser-1661207065528.jpg"
+ },
+ {
+  "id": 43,
+  "name": "El",
+  "lastname": "Pipa",
+  "email": "Elpipa@email.com",
+  "password": "$2b$10$hnwXXxlVW2q8HEq7qV9zYOjOitX29V8phUn2685Bq4T8eNozPxPM.",
+  "categoriaUsuario": "Comprador",
+  "image": "imgUser-1661355486061.jpg"
+ },
+ {
+  "id": 44,
+  "name": "Prueba",
+  "lastname": "Horrendo",
+  "email": "Pipo@Pipo.com",
+  "password": "$2a$10$KS7DMwWdYKCy2tnzVRE8eu4Upxp2KlskYmh1xh85VWZEOFa4vzFjy",
+  "categoriaUsuario": "Comprador",
+  "image": "imgUser-1661371794920.jpg"
+ },
+ {
+  "id": 45,
+  "name": "Camila",
+  "lastname": "Rios",
+  "email": "CM@gmail.com",
+  "password": "$2a$10$ZWDh4sP6oZc3mYtJCeJbKuUI3zYkJ9maVA5wTE97BTGbFdXCj/Lba",
+  "categoriaUsuario": "Comprador",
+  "image": "imgUser-1661385413834.jpg"
+ },
+ {
+  "id": 46,
+  "name": "Felipe",
+  "lastname": "Pipa",
+  "email": "Fepipa@email.com",
+  "password": "$2a$10$3y5j.MadGxMdhKqU0Qp5nu/wTVLRk68Pf1WloFQjSmickODN7dnm2",
+  "categoriaUsuario": "Comprador",
+  "image": "imgUser-1662144202828.png"
+ },
+ {
+  "id": 47,
+  "name": "Jarol",
+  "lastname": "Davi",
+  "email": "jaroldavi@emial.com",
+  "password": "$2a$10$kFGxdN8iWbEzBwvONtXTJ.P58.ff2/5ce.NeSIWZJbFPNh5XClO8q",
+  "categoriaUsuario": "Comprador",
+  "image": "imgUser-1662154502486.jpg"
  }
 ]

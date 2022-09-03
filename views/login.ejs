@@ -10,49 +10,65 @@
 </head>
 
 <!-- Partial de HEADER -->
+
 <body class="cuentas">
   <%- include('./partials/header.ejs') %>
 
-  <p>
-    <a class="pagina_inicio" href="/index.html">Inicio</a>
-  </p>
-  <section class="j_contenedor_formulario">
-    <h1>Ingresar</h1><br>
-    <article class="j_formulario-log">
-  
-  
-      <form action="/ingreso.html" method="post">
-  
+    <p>
+      <a class="pagina_inicio" href="/index.html">Inicio</a>
+    </p>
+    <section class="j_contenedor_formulario">
+
+      <h1>Ingresar</h1><br>
+
+      <article class="j_formulario-log">
+
         <div>
-          <label for="Email">Usuario</label>
-          <input class="j_entradas" type="text" name="Email" placeholder="usuario@ejemplo.com" required>
+          <% if (locals.errors && errors.email ) { %>
+            <p class="flechas">
+              <%= errors.email.msg %>
+            </p>
+            <% } %>
+        
         </div>
-  
-        <div>
-          <label for="Contraseña">Contraseña</label>
-          <input class="j_entradas" type="password" name="Contraseña" required>
-        </div>
-        <div class="j_rec_pass">
-          <label id="rp2" for="rec_Usuario">Guardar contraseña</label>
-          <input id="rp1" type="checkbox" name="rec_Usuario" value="Recordar">
-        </div>
-        <div>
-          <button class="j_boton_ingresar" action="submit">Continuar</button>
-        </div>
-    </article>
-    <div class="notienesAcc">
-      ¿Aun no tienes una cuenta?
-      <a class="creaUna" href="registro.html">Creá una aquí</a>
-    </div>
-  
-    </form>
-  </section>
+        
+        <form action="/users/login" method="POST">
+        
+          <div>
+            <label for="email">Usuario</label>
+            <input class="j_entradas" type="email" name="email" placeholder="usuario@ejemplo.com">
+            </div>
+            
+            <div>
+              <label for="password">Contraseña</label>
+              <input class="j_entradas" type="password" name="password">
+              </div>
+              
+              <div class="j_rec_pass">
+                <label id="rp2" for="rec_Usuario">Recordar Usuario</label>
+                <input id="rp1" type="checkbox" name="rec_usuario" value="rec_Usuario">
+                </div>
+            
+                <div>
+                <button class="j_boton_ingresar" type="submit" value="Login">Continuar</button>
+                </div>
+                <div class="notienesAcc">
+                  ¿Aun no tienes una cuenta?
+                  <a class="creaUna" href="/registro">Creá una aquí</a>
+                  </div>
+
+      </article>
+
+        </form>
+
+    </section>
 
   <%- include('./partials/script.ejs') %>
 
-    <!-- Partial de FOOTER -->
+                  <!-- Partial de FOOTER -->
 
-    <%- include('./partials/footer.ejs') %>
+  <%- include('./partials/footer.ejs') %>
+
 </body>
 
 </html>

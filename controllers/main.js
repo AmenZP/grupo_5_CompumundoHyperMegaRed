@@ -1,6 +1,10 @@
 const controller = {
   home: function (req, res) {
-    res.render("index", {});
+    res.render("index", {
+      locals: {
+        isLogged: false,
+      },
+    });
   },
 
   carrito: function (req, res) {
@@ -29,6 +33,20 @@ const controller = {
 
   editarUsuario: function (req, res) {
     res.render("editarUsuario");
+  },
+
+  numeroVisitas: function (req, res) {
+    if (req.session.numeroVIsitas == undefined) {
+      req.session.numeroVIsitas = 0;
+    }
+
+    req.session.numeroVIsitas++;
+
+    res.send("Session tiene el numero " + req.session.numeroVIsitas);
+  },
+
+  mostrarNumerosSession: function (req, res) {
+    res.send("Session tiene el numero: " + req.session.numeroVIsitas);
   },
 };
 
