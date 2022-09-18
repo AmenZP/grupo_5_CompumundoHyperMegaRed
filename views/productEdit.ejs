@@ -14,56 +14,69 @@
         <div class="container-edit">
 
             <div class="estas-editando">
-                <h2 class="estas-editanto-texto">Estas editando: </h2>
+                <h2 class="estas-editanto-texto">Estas editando: <%= editProduct.name %>
+                </h2>
             </div>
 
             <div class="formulario-edit">
 
-                <form action="#" method="POST">
+                <form action="/product/productEdit/<%editProduct.id%>?_method=PUT" method="POST">
+                
+                    <%console.log("editproductinvista",editProduct.id)%>
 
                     <div class="formulario-edit-1">
 
                         <div class="form-edit-name">
 
                             <label for="name" class="form-label">Nombre de producto</label>
-                            <input type="text" name="name" id="name" placeholder="Nombre de producto">
-
+                            <input type="text" name="name" id="name" value="<%= editProduct.name %> ">
                         </div>
+                            
+                        <div class="form-edit-name">
+                            <label for="gpu" class="form-label">Modelo de GPU</label>
+                            <input type="text" name="gpu" id="gpu" value="<%= editProduct.gpu %> ">
+                            </div>
+                            
+                            </div>
+                        <div class="form-edit-name">
+                                <label for="display" class="form-label">Resolucion y tamaño de pantalla</label>
+                                <input type="text" name="resolucion" id="display" value="<%= editProduct.resolucion %> ">
+                                </div>
+                                
+                                
+                        <div class="form-edit-name">
+                            <label for="cpu" class="form-label">Procesador</label>
+                            <input type="text" name="cpu" id="cpu" value="<%= editProduct.cpu %> ">
+                        </div>
+
 
                         <div class="form-edit-name">
+                                <label for="storage" class="form-label">Capacidad de almacenamiento</label>
+                                <input type="text" name="storage" id="storage" value="<%= editProduct.storage %> ">
+                                </div>
 
-                            <label for="price" class="form-label">Precio </label>
-                            <input type="text" name="price" id="price" placeholder="Precio de producto">
-
-                        </div>
 
                         <div class="form-edit-name">
-
-                            <label for="name" class="form-label">Nombre de producto</label>
-                            <input type="text" name="bname" id="name" placeholder="Nombre de producto">
-
+                            <label for="price" class="form-label">Precio</label>
+                            <input type="text" name="precio" id="price" value="<%= editProduct.precio %> ">
                         </div>
 
-                        <div class="form-edit-name">
-
-                            <label for="name" class="form-label">Nombre de producto</label>
-                            <input type="text" name="bname" id="name" placeholder="Nombre de producto">
-
+                        <div class="div-boton-container">
+                            <div class="divForms">
+                                <input type="submit" value="Editar">
+                                </div>
                         </div>
-
-                        <div class="divForms">
-                            <button class="j_boton_ingresar" action="submit">Continuar</button>
                         </div>
+                        </form>
 
+                        <form action="/product/productEdit/<%editProduct.id%>?_method=DELETE" method="POST">
+                            <% console.log("delete edit", editProduct.id)%>
+                                <div class="divForms">
+                                    <button type="submit">Borrar Producto</button>
+                            </div>
+                        </form>
 
-
-                    </div>
-
-
-
-                </form>
-
-            </div>
+        </div>
         </div>
 
         <%- include('./partials/script.ejs') %>

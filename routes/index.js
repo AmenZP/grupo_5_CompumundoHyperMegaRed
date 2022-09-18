@@ -15,15 +15,15 @@ router.get("/", controller.home);
 
 router.get("/carrito", controller.carrito);
 
-router.get("/productDetail", controller.productDetail);
+router.get("/productDetail/:id", controller.productDetail);
 
 router.get("/login", guestMiddleware, usersControllerLogin, controller.login);
 
 router.get("/registro", guestMiddleware, controller.registro);
 
-router.get("/productEdit", controller.productEdit);
+// router.get("/productEdit", controller.productEdit);
 
-router.get("/productAdd", controller.productAdd);
+// router.get("/productAdd", controller.productAdd);
 
 router.get("/editarUsuario", controller.editarUsuario);
 

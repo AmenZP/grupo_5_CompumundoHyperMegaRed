@@ -58,7 +58,6 @@ router.patch("/:id", update);
 
 router.delete("/delete/:id", borrarUser);
 
-router.get("/login", controller.login);
 
 router.post("/login", processLogin);
 

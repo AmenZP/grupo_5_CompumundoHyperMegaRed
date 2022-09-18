@@ -36,39 +36,55 @@
 
             <div class="productos">
 
+              <% productosVista.forEach( function(productoVista){ %>
+
               <article class="articulo-main">
-                <div>
-                  <img src="https://assets.nvidia.partners/images/png/asus-rog-g14.png" alt="laptop"
-                    class="imagen-producto" />
-                  <h2 class="descripcion">ASUS ROG GA401QM-211.ZG14 notebook 1</h2>
+                <div class="imagenproducto-container">
+                  <a title="Producto" href="/productDetail/<%= productoVista.id %>"><img src="/profileimages/<%= productoVista.image %>"
+                      alt="laptop" class="imagen-producto" /></a>
+                  <h2 class="descripcion">
+                    <%= productoVista.name %>
+                  </h2>
                   <div class="flechas">
                     <div class="flechas--descripcion">
                       <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">GPU: GeForce RTX 3060</p>
+                      <p class="descripcion--producto">
+                        <%= productoVista.gpu %>
+                      </p>
                     </div>
 
                     <div class="flechas--descripcion">
                       <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Display: 14" | 1920 x 1080</p>
+                      <p class="descripcion--producto">
+                        <%= productoVista.resolucion %>
+                      </p>
                     </div>
 
                     <div class="flechas--descripcion">
                       <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">CPU: Ryzen 9 5900HS</p>
+                      <p class="descripcion--producto">
+                        <%= productoVista.cpu %>
+                      </p>
                     </div>
 
                     <div class="flechas--descripcion">
                       <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Memory: 16GB DDR4-SDRAM</p>
+                      <p class="descripcion--producto">
+                        <%= productoVista.ram %>
+                      </p>
                     </div>
 
                     <div class="flechas--descripcion">
                       <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Storage: 1 TB SSD</p>
+                      <p class="descripcion--producto">
+                        <%= productoVista.storage %>
+                      </p>
                     </div>
 
                     <div class="precio--boton">
-                      <p class="precio">$1.317</p>
+                      <p class="precio">
+                        <%= productoVista.price %>
+                      </p>
                       <div class="boton--carrito">
                         <input class="boton--" type="button" value="Agregar al carrito">
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -79,308 +95,7 @@
                 </div>
               </article>
 
-              <article class="articulo-main">
-                <div>
-                  <img src="https://assets.nvidia.partners/images/png/asus-rog-g14.png" alt="laptop"
-                    class="imagen-producto" />
-                  <h2 class="descripcion">ASUS ROG GA401QM-211.ZG14 notebook 1</h2>
-                  <div class="flechas">
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">GPU: GeForce RTX 3060</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Display: 14" | 1920 x 1080</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">CPU: Ryzen 9 5900HS</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Memory: 16GB DDR4-SDRAM</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Storage: 1 TB SSD</p>
-                    </div>
-
-                    <div class="precio--boton">
-                      <p class="precio">$1.317</p>
-                      <div class="boton--carrito">
-                        <input class="boton--" type="button" value="Agregar al carrito">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </article>
-
-              <article class="articulo-main">
-                <div>
-                  <img src="https://assets.nvidia.partners/images/png/asus-rog-g14.png" alt="laptop"
-                    class="imagen-producto" />
-                  <h2 class="descripcion">ASUS ROG GA401QM-211.ZG14 notebook 1</h2>
-                  <div class="flechas">
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">GPU: GeForce RTX 3060</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Display: 14" | 1920 x 1080</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">CPU: Ryzen 9 5900HS</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Memory: 16GB DDR4-SDRAM</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Storage: 1 TB SSD</p>
-                    </div>
-
-                    <div class="precio--boton">
-                      <p class="precio">$1.317</p>
-                      <div class="boton--carrito">
-                        <input class="boton--" type="button" value="Agregar al carrito">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </article>
-
-              </article>
-
-              <article class="articulo-main">
-                <div>
-                  <img src="https://assets.nvidia.partners/images/png/asus-rog-g14.png" alt="laptop"
-                    class="imagen-producto" />
-                  <h2 class="descripcion">ASUS ROG GA401QM-211.ZG14 notebook 1</h2>
-                  <div class="flechas">
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">GPU: GeForce RTX 3060</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Display: 14" | 1920 x 1080</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">CPU: Ryzen 9 5900HS</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Memory: 16GB DDR4-SDRAM</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Storage: 1 TB SSD</p>
-                    </div>
-
-                    <div class="precio--boton">
-                      <p class="precio">$1.317</p>
-                      <div class="boton--carrito">
-                        <input class="boton--" type="button" value="Agregar al carrito">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </article>
-
-              </article>
-
-              <article class="articulo-main">
-                <div>
-                  <img src="https://assets.nvidia.partners/images/png/asus-rog-g14.png" alt="laptop"
-                    class="imagen-producto" />
-                  <h2 class="descripcion">ASUS ROG GA401QM-211.ZG14 notebook 1</h2>
-                  <div class="flechas">
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">GPU: GeForce RTX 3060</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Display: 14" | 1920 x 1080</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">CPU: Ryzen 9 5900HS</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Memory: 16GB DDR4-SDRAM</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Storage: 1 TB SSD</p>
-                    </div>
-
-                    <div class="precio--boton">
-                      <p class="precio">$1.317</p>
-                      <div class="boton--carrito">
-                        <input class="boton--" type="button" value="Agregar al carrito">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </article>
-
-              <article class="articulo-main">
-                <div>
-                  <img src="https://assets.nvidia.partners/images/png/asus-rog-g14.png" alt="laptop"
-                    class="imagen-producto" />
-                  <h2 class="descripcion">ASUS ROG GA401QM-211.ZG14 notebook 1</h2>
-                  <div class="flechas">
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">GPU: GeForce RTX 3060</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Display: 14" | 1920 x 1080</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">CPU: Ryzen 9 5900HS</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Memory: 16GB DDR4-SDRAM</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Storage: 1 TB SSD</p>
-                    </div>
-
-                    <div class="precio--boton">
-                      <p class="precio">$1.317</p>
-                      <div class="boton--carrito">
-                        <input class="boton--" type="button" value="Agregar al carrito">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="articulo-main">
-                <div>
-                  <img src="https://assets.nvidia.partners/images/png/asus-rog-g14.png" alt="laptop"
-                    class="imagen-producto" />
-                  <h2 class="descripcion">ASUS ROG GA401QM-211.ZG14 notebook 1</h2>
-                  <div class="flechas">
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">GPU: GeForce RTX 3060</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Display: 14" | 1920 x 1080</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">CPU: Ryzen 9 5900HS</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Memory: 16GB DDR4-SDRAM</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Storage: 1 TB SSD</p>
-                    </div>
-
-                    <div class="precio--boton">
-                      <p class="precio">$1.317</p>
-                      <div class="boton--carrito">
-                        <input class="boton--" type="button" value="Agregar al carrito">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="articulo-main">
-                <div>
-                  <img src="https://assets.nvidia.partners/images/png/asus-rog-g14.png" alt="laptop"
-                    class="imagen-producto" />
-                  <h2 class="descripcion">ASUS ROG GA401QM-211.ZG14 notebook 1</h2>
-                  <div class="flechas">
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">GPU: GeForce RTX 3060</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Display: 14" | 1920 x 1080</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">CPU: Ryzen 9 5900HS</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Memory: 16GB DDR4-SDRAM</p>
-                    </div>
-
-                    <div class="flechas--descripcion">
-                      <i class="fa-solid fa-angle-right"></i>
-                      <p class="descripcion--producto">Storage: 1 TB SSD</p>
-                    </div>
-
-                    <div class="precio--boton">
-                      <p class="precio">$1.317</p>
-                      <div class="boton--carrito">
-                        <input class="boton--" type="button" value="Agregar al carrito">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </article>
+              <% }) %>
             </div>
           </div>
           <p class="mensaje">AQUI IRIA UN 'LOAD MORE'</p>

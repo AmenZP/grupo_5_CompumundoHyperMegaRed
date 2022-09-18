@@ -1,17 +1,49 @@
-var express = require('express');
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
+const multer = require("multer");
+const path = require("path");
 
-let {formAgregar,addProduct,editProduct,updateProduct,deleteProduct} = require('../controllers/productController')
+const {
+  formAgregar,
+  addProduct,
+  editProduct,
+  updateProduct,
+  deleteProduct,
+  indexProducts,
+} = require("../controllers/productController");
 
-router.get('/agregarProducto', formAgregar);
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, path.join(__dirname, "../public/profileImages"));
+  },
+  filename: (req, file, cb) => {
+    const newFilename =
+      "imgUser-" + Date.now() + path.extname(file.originalname);
+    cb(null, newFilename);
+  },
+});
 
-router.post('/agregarProducto', addProduct);
+const upload = multer({ storage });
 
-router.get('/editar/:id', editProduct);
+router.get("/", indexProducts);
 
-router.put('/editar/:id', updateProduct);
+router.get("/productAdd", formAgregar);
 
-router.delete('/deleteProduct/:id', deleteProduct );
+router.post("/productAdd", upload.single("ImagenProducto"), addProduct);
 
+// router.post("/agregarProducto", addProduct);
+
+// router.get("/productEdit", editProduct);
+
+router.get("/productEdit/:id", editProduct);
+router.put("/productEdit/:id", updateProduct);
+
+// router.put("/productEdit", updateProduct);
+
+// router.put("/prductEdit/:id", updateProduct);
+
+router.delete("/productEdit/:id", deleteProduct);
+
+// router.delete("/deleteProduct/:id", deleteProduct);
 
 module.exports = router;

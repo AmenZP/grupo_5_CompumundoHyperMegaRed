@@ -1,18 +1,19 @@
 const User = require("../models/User");
 
 function userLoggedMiddleware(req, res, next) {
+  console.log("Pasando por middleware");
   res.locals.islogged = false;
-  console.log("Locals Logged", res.locals.isLogged);
-  let emailInCookie = req.cookies.userEmail;
-  console.log("UsersFromCookie", emailInCookie);
-  let userFromCookie = User.findByField("email", emailInCookie);
+  console.log("Locals", res.locals.islogged);
+  const emailInCookie = req.cookies.userEmail;
+  const userFromCookie = User.findByField("email", emailInCookie);
+  // console.log("userFromCookie", userFromCookie);
 
   if (userFromCookie) {
     req.session.userLogged = userFromCookie;
   }
 
   if (req.session.userLogged) {
-    res.locals.isLogged = true;
+    res.locals.islogged = true;
     res.locals.userLogged = req.session.userLogged;
   }
 

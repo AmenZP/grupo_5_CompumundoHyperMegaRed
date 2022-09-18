@@ -6,11 +6,11 @@ const logger = require("morgan");
 const methodOverride = require("method-override");
 const session = require("express-session");
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/usersRouter");
-let adminRouter = require("./routes/adminRouter");
+const indexRouter = require("./routes/index");
+const usersRouter = require("./routes/usersRouter");
+const adminRouter = require("./routes/adminRouter");
 
-var app = express();
+const app = express();
 
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
@@ -42,12 +42,12 @@ app.use(
   })
 );
 app.use(cookieParser());
+app.use("/", userLoggedMiddleware);
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/product", adminRouter);
 
-app.use(userLoggedMiddleware);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));

@@ -69,10 +69,10 @@ module.exports = {
       if (isOkThePassword) {
         delete UserToLogin.password;
         req.session.userLogged = UserToLogin;
-        // console.log("userlogged", req.session.userLogged);
+        console.log("userlogged", req.session.userLogged);
 
         if (req.body.rec_usuario) {
-          res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 1 });
+          res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 2 });
         }
 
         return res.redirect("/profile");

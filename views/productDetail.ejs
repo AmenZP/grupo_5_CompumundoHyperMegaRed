@@ -33,7 +33,7 @@
           <div class="imgArticleCont">
     
           <div>
-            <img src="https://assets.nvidia.partners/images/png/asus-rog-g14.png" alt="laptop" class="imagen-producto" />
+            <img src="/profileimages/<%= producto.image %>" alt="laptop" class="imagen-producto" />
             <div class="imgThumbCarr">
               <!-- aca iria tipo carrusel -->
             </div>
@@ -42,10 +42,14 @@
         </div>
         <div class="prodDescWrapper">
           <div class="prodTitle">
-            <h1>Notebook Gamer AORUS KD 15.6" Core I7 11800H 16GB (2x8GB) 512GB SSD NVMe RTX 3060 240Hz W11</h1>
+            <h1>
+              <%= producto.name %>
+            </h1>
           </div>
           <div class="prodPriceCont">
-            <p>$340.000</p>
+            <p>
+              <%= producto.price %>
+            </p>
             <p>Precio especial</p>
           </div>
         </div>
@@ -71,18 +75,24 @@
             <div class="caractEspecFlex">
     
             <div class="caractEspec">
-              <div>Color</div>
-              <div>Gris Oscuro</div>
+              <div>Resolucion de pantalla </div>
+              <div>
+                <%= producto.resolucion %>
+              </div>
             </div>
     
             <div class="caractEspec">
               <span>Tipo De Cpu</span>
-              <span>Intel</span>
+              <span>
+                <%= producto.cpu %>
+              </span>
             </div>
     
             <div class="caractEspec">
               <span>Tipo De Gpu</span>
-              <span>nVidia GeForce</span>
+              <span>
+                <%= producto.gpu %>e
+              </span>
             </div>
     
             <div class="caractEspec">
@@ -96,29 +106,33 @@
             </div>
     
             <div class="caractEspec">
-              <span>Modelo Cpu</span>
-              <span>11800H</span>
+              <span>Memoria RAM</span>
+              <span>
+                <%= producto.ram %>
+              </span>
             </div>
     
             <div class="caractEspec">
-              <span>Modelo Gpu</span>
-              <span>RTX 3060</span>
+              <span>Capacidad de almacenamiento</span>
+              <span>
+                <%= producto.storage %>
+              </span>
             </div>
     
-            <div class="caractEspec">
+            <!-- <div class="caractEspec">
               <span>Memoria Gpu</span>
               <span>6gb</span>
-            </div>
+            </div> -->
     
             <div class="caractEspec">
               <span>Lector De Huellas</span>
               <span>No</span>
             </div>
             
-            <div class="caractEspec">
+            <!-- <div class="caractEspec">
               <span>Familia Del Procesador</span>
               <span>Intel Core i7</span>
-            </div>
+            </div> -->
             </div>
             </div>
             </div>

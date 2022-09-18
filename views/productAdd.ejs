@@ -11,7 +11,7 @@
 
 <body>
     <!-- Partial de HEADER -->
-    <%- include('./partials/header.ejs') %>
+    <!-- <*%- include('./partials/header.ejs') %> -->
     <div class="cont prod-wrap">
         <div class="row">
           <div class="col-12">
@@ -20,83 +20,117 @@
         </div>
       
         <div class="col-12">
-          <form action="/products/create" method="POST">
+          <form action="/product/productAdd" method="POST" enctype="multipart/form-data">
+          
             <div class="row prod-det">
-              <div class="col=12 col-md-6">
-                <label for="name" class="form-label">Nombre del producto</label>
-                <input type="text" id="name" name="name" placeholder="Ej: Notebook HP" class="form-input">
-              </div>
-              <div class="col=12 col-md-6">
-                <label for="price" class="form-label">Precio del producto</label>
-                <input type="text" id="price" name="price" placeholder="Ej: 200" class="form-input">
-              </div>
-              <div class="col=12 col-md-6">
-                <label for="name" class="form-label">Color</label>
-                <input type="text" id="color" name="color" placeholder="Ej: Negro" class="form-input">
-              </div>
-              <div class="col=12 col-md-6">
-                <label for="tipocpu" class="form-label">Tipo de CPU</label>
-                <select name="tipocpu" id="tipocpu" class="form-input">
-                  <option value="">Intel</option>
-                  <option value="">Amd</option>
-              </div>
-              <div class="col=12 col-md-6">
-                <label for="modelocpu" class="form-label">Modelo de CPU</label>
-                <input type="text" id="modelocpu" name="modelocpu" placeholder="Ej:4460" class="form-input">
-              </div>
-              <div class="col=12 col-md-6">
-                <label for="fliacpu" class="form-label">Familia de CPU</label>
-                <input type="text" id="fliacpu" name="fliacpu" placeholder="Ej:Intel Core i7" class="form-input">
-              </div>
-              <div class="col=12 col-md-6">
-                <label for="tipogpu" class="form-label">Tipo de GPU</label>
-                <select name="tipogpu" id="tipogpu" class="form-input">
-                  <option value="">nVidia</option>
-                  <option value="">Radeon</option>
-              </div>
-              <div class="col=12 col-md-6">
-                <label for="memogpu" class="form-label">Memoria de GPU</label>
-                <input type="text" id="memogpu" name="memogpu" placeholder="Ej:6gb" class="form-input">
-              </div>
-              <div class="col=12 col-md-6">
-                <label for="modelogpu" class="form-label">Modelo de GPU</label>
-                <input type="text" id="modelogpu" name="modelogpu" placeholder="Ej:nVidia GTX1080" class="form-input">
-              </div>
-              <div class="col=12 col-md-6">
-                <label for="tipo" class="form-label">Tipo</label>
-                <input type="text" id="tipo" name="tipo" placeholder="Ej:Notebook" class="form-input">
-              </div>
-              <div class="col=12 col-md-6">
-                <label for="bateria" class="form-label">Bateria Extraible</label>
-                <select name="bateria" id="bateria" class="form-input">
-                  <option value="">No</option>
-                  <option value="">Si</option>
-                  <option value="">No Tiene</option>
-                </select>
-              </div>
+              <div class="row prod-det">
+                <div class="col=12 col-md-6">
+                  <label for="name" class="form-label">Nombre del producto</label>
+                  <input type="text" id="name" name="name" placeholder="Ej: Notebook HP" class="form-input">
+                </div>
+                <div class="col=12 col-md-6">
+                  <label for="GPU" class="form-label">Nombre de la GPU</label>
+                  <input type="text" id="gpu" name="gpu" placeholder="Ej: GTX 1060" class="form-input">
+                  </div>
 
-              <div class="col=12 col-md-6">
-                <label for="lectorhuella" class="form-label">Lector de Huellas</label>
-                <select name="lectorhuella" id="lectorhuella" class="form-input">
-                  <option value="">Si</option>
-                  <option value="">No</option>
-                </select>
-              </div>
-              <div class="divForms">
-                <button class="j_boton_ingresar" action="submit">Continuar</button>
-              </div>
+                  <div class="col=12 col-md-6">
+                    <label for="resolucion" class="form-label">Resolucion</label>
+                    <input type="text" id="resolucion" name="resolucion" placeholder="Ej: 1920 x 1080" class="form-input">
+                    </div>
 
+                  <div class="col=12 col-md-6">
+                    <label for="cpu" class="form-label">CPU</label>
+                    <input type="text" id="cpu" name="cpu" placeholder="Ej: Ryzen" class="form-input">
+                    </div>
+                    
+                    <div class="col=12 col-md-6">
+                      <label for="ram" class="form-label">Memoria Ram</label>
+                      <input type="text" id="ram" name="ram" placeholder="Ej: 8GB" class="form-input">
+                    </div>
+                    
+                    <div class="col=12 col-md-6">
+                      <label for="storage" class="form-label">Storage</label>
+                      <input type="text" id="storage" name="storage" placeholder="Ej: 1TB" class="form-input">
+                    </div>
+                    
+                    <div class="col=12 col-md-6">
+                      <label for="ImagenProducto" class="form-label">Imagen de Producto</label>
+                      <input class="form-input" type="file" name="ImagenProducto">
+                    </div>
+                    
+                    
+                    
+                    <div class="col=12 col-md-6">
+                      <label for="precio" class="form-label">Precio</label>
+                      <input type="text" id="precio" name="precio" placeholder="Ej: $99.99" class="form-input">
+                    </div>
+                    
+                    
+                    <div class="divForms">
+                      <input type="submit" value="Continuar" class="j_boton_ingresar"></input>
+                    </div>
+                    </div>
+                    </form>
+                    </div>
+                    </div>
+                    
+                    <%- include('./partials/script.ejs') %>
+                    
+                      <!-- Partial de FOOTER -->
+                    
+                      <%- include('./partials/footer.ejs') %>
+                        </body>
+                    
+                        </html>
+                        <!-- <div class="col=12 col-md-6">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <label for="color" class="form-label">Color</label>
+                                                                                                                                                                                                                                                                                                                                                                                            <input type="text" id="color" name="color" placeholder="Ej: Negro" class="form-input">
+                                                                                                                                                                                                                                                                                                                                                                                          </div> -->
+                        <!-- <div class="col=12 col-md-6">
+                    <label for="tipocpu" class="form-label">Tipo de CPU</label>
+                    <select name="tipocpu" id="tipocpu" class="form-input">
+                      <option value="">Intel</option>
+                      <option value="">Amd</option>
+</div> -->
+<!-- <div class="col=12 col-md-6">
+  <label for="modelocpu" class="form-label">Modelo de CPU</label>
+  <input type="text" id="modelocpu" name="modelocpu" placeholder="Ej:4460" class="form-input">
+</div> -->
+<!-- <div class="col=12 col-md-6">
+  <label for="fliacpu" class="form-label">Familia de CPU</label>
+  <input type="text" id="fliacpu" name="fliacpu" placeholder="Ej:Intel Core i7" class="form-input">
+</div> -->
+<!-- <div class="col=12 col-md-6">
+  <label for="tipogpu" class="form-label">Tipo de GPU</label>
+  <select name="tipogpu" id="tipogpu" class="form-input">
+    <option value="">nVidia</option>
+    <option value="">Radeon</option>
+</div> -->
+<!-- <div class="col=12 col-md-6">
+  <label for="memogpu" class="form-label">Memoria de GPU</label>
+  <input type="text" id="memogpu" name="memogpu" placeholder="Ej:6gb" class="form-input">
+</div>
+<div class="col=12 col-md-6">
+  <label for="modelogpu" class="form-label">Modelo de GPU</label>
+  <input type="text" id="modelogpu" name="modelogpu" placeholder="Ej:nVidia GTX1080" class="form-input">
+</div>
+<div class="col=12 col-md-6">
+  <label for="tipo" class="form-label">Tipo</label>
+  <input type="text" id="tipo" name="tipo" placeholder="Ej:Notebook" class="form-input">
+</div>
+<div class="col=12 col-md-6">
+  <label for="bateria" class="form-label">Bateria Extraible</label>
+  <select name="bateria" id="bateria" class="form-input">
+    <option value="">No</option>
+    <option value="">Si</option>
+    <option value="">No Tiene</option>
+  </select>
+</div> -->
 
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <%- include('./partials/script.ejs') %>
-
-        <!-- Partial de FOOTER -->
-
-        <%- include('./partials/footer.ejs') %>
-</body>
-
-</html>
+<!-- <div class="col=12 col-md-6">
+  <label for="lectorhuella" class="form-label">Lector de Huellas</label>
+  <select name="lectorhuella" id="lectorhuella" class="form-input">
+    <option value="">Si</option>
+    <option value="">No</option>
+  </select>
+</div> -->

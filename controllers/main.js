@@ -1,10 +1,19 @@
+const fs = require("fs");
+const path = require("path");
+
+const productsPath = path.join(__dirname, "../data/productsDataBase.json");
+const products = JSON.parse(fs.readFileSync(productsPath, "utf-8"));
+
+const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 const controller = {
-  home: function (req, res) {
-    res.render("index", {
-      locals: {
-        isLogged: false,
-      },
+  home: (req, res) => {
+    const productosVista = products.filter((productos) => {
+      return productos.id < 100;
     });
+    console.log("prod", productosVista);
+    res.render("index", { toThousand, productosVista });
+    // res.render("index", {locals: { isLogged: false }});
   },
 
   carrito: function (req, res) {
@@ -12,7 +21,14 @@ const controller = {
   },
 
   productDetail: function (req, res) {
-    res.render("productDetail");
+    const id = req.params.id;
+    let producto = products.filter((producto) => {
+      return producto.id == id;
+    });
+
+    producto = producto[0];
+    // res.send(producto);
+    res.render("productDetail", { title: producto.name, producto });
   },
 
   login: function (req, res) {
@@ -23,13 +39,13 @@ const controller = {
     res.render("registro", {});
   },
 
-  productEdit: function (req, res) {
-    res.render("productEdit");
-  },
+  // productEdit: function (req, res) {
+  //   res.render("productEdit");
+  // },
 
-  productAdd: function (req, res) {
-    res.render("productAdd");
-  },
+  // productAdd: function (req, res) {
+  //   res.render("productAdd");
+  // },
 
   editarUsuario: function (req, res) {
     res.render("editarUsuario");
