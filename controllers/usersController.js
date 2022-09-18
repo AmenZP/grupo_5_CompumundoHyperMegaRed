@@ -1,10 +1,12 @@
 const { validationResult } = require("express-validator");
 const fs = require("fs");
 const path = require("path");
-const User = require("../models/User");
+//const User = require("../models/User");
 const bcryptjs = require("bcryptjs");
 const { clearScreenDown } = require("readline");
 const { CLIENT_RENEG_LIMIT } = require("tls");
+
+const models = require( "../models/index" );
 
 const pathUsers = path.join(__dirname, "../data/userData.json");
 const users = JSON.parse(fs.readFileSync(pathUsers, "utf-8"));
@@ -14,13 +16,23 @@ module.exports = {
     res.render("registro");
   },
 
-  store: (req, res) => {
-    // Valdacion de errores con express validator
-    let errors = validationResult(req);
-    const userInDB = User.findByField("email", req.body.email);
-    console.log("userDB", userInDB);
+  store: async (req, res) => {
 
-    if (userInDB) {
+    // Valdacion de errores con express validator
+    let errors = validationResult( req );
+    //const userInDB = User.findByField( "email", req.body.email );
+
+    let userByEmail = await models.Users.findOne({
+      where:{
+        email: req.body.emailReg
+      }
+    });
+
+    console.log( "Encontrando por email:" );
+    console.log( userByEmail );
+
+    if ( userByEmail ) {
+
       return res.render("registro", {
         errors: {
           email: {
@@ -29,28 +41,39 @@ module.exports = {
         },
         oldData: req.body,
       });
+
     }
 
     if (errors.isEmpty()) {
       // Validacion de imagenes con Multer para nuevo usuario
-      if (req.file) {
-        let usersIMG = req.body;
-        usersIMG.image = req.file.filename;
+      if ( req.file ) {
 
-        let nuevoUsuario = {
-          id: users[users.length - 1].id + 1,
-          ...req.body,
-          password: bcryptjs.hashSync(req.body.password, 10),
-        };
+        let newUser  = {};
+        let formBody = req.body;
+        
+        newUser.name     = formBody.nameReg;
+        newUser.lastname = formBody.lastnameReg;
+        newUser.email    = formBody.emailReg;
+        newUser.password = bcryptjs.hashSync(req.body.passwordReg, 10);
+        newUser.category = formBody.categoriaUsuarioReg;
+        newUser.image    = req.file.filename;
 
-        console.log("nuevoUsuario", nuevoUsuario);
-        users.push(nuevoUsuario);
-        fs.writeFileSync(pathUsers, JSON.stringify(users, null, " "));
+        console.log("nuevoUsuario", newUser);
+       
+        //users.push(nuevoUsuario);
+        //fs.writeFileSync(pathUsers, JSON.stringify(users, null, " "));
+
+        await models.Users.create( newUser );
+        
         res.redirect("/login");
+
       }
-    } else {
+
+    } 
+    else {
       res.render("registro", { errors: errors.array(), old: req.body });
     }
+
   },
 
   login: function (req, res) {

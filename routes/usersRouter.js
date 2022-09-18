@@ -18,11 +18,11 @@ const router = express.Router();
 
 //Validaciones
 const validateCreateForm = [
-  body("name").notEmpty().withMessage("Debes completar el campo de Nombre"),
-  body("lastname")
+  body("nameReg").notEmpty().withMessage("Debes completar el campo de Nombre"),
+  body("lastnameReg")
     .notEmpty()
     .withMessage("Debes completar el campo de Apellido"),
-  body("email")
+  body("emailReg")
     .isEmail()
     .withMessage("Debes completar el campo con un email valido"),
 ];
@@ -32,6 +32,7 @@ const storage = multer.diskStorage({
     cb(null, path.join(__dirname, "../public/profileImages"));
   },
   filename: (req, file, cb) => {
+
     const newFilename =
       "imgUser-" + Date.now() + path.extname(file.originalname);
     cb(null, newFilename);
@@ -47,7 +48,7 @@ const upload = multer({ storage });
 
 router.post(
   "/register",
-  upload.single("imagenUsuario"),
+  upload.single("imagenUsuarioReg"),
   validateCreateForm,
   store
 );

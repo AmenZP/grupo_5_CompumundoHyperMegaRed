@@ -65,12 +65,17 @@ const validarFormulario = (e) => {
 };
 
 inputs.forEach((input) => {
-  input.addEventListener("keyup", validarFormulario);
-  input.addEventListener("blur", validarFormulario);
+
+  input.addEventListener( "keyup", validarFormulario );
+  input.addEventListener( "blur", validarFormulario );
+
 });
 
 registerFormulario.addEventListener("submit", (e) => {
+  
   e.preventDefault();
+
+  console.log( campos );
 
   if (
     campos.nameReg &&

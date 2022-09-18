@@ -70,5 +70,15 @@
   "password": "$2a$10$kFGxdN8iWbEzBwvONtXTJ.P58.ff2/5ce.NeSIWZJbFPNh5XClO8q",
   "categoriaUsuario": "Comprador",
   "image": "imgUser-1662154502486.jpg"
+ },
+ {
+  "id": 48,
+  "nameReg": "Elizabeth",
+  "lastnameReg": "Ortiz",
+  "emailReg": "eli@gmail.com",
+  "passwordReg": "123456789",
+  "categoriaUsuario": "Comprador",
+  "image": "imgUser-1663516677270.png",
+  "password": "$2a$10$qbVShXSQvBZDNbPAIGNdp.4TYVnHu72.mdsznIEM98BU9NHbmFcIG"
  }
 ]

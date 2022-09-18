@@ -1,11 +1,14 @@
-const User = require("../models/User");
+//const User = require("../models/User");
 
 function userLoggedMiddleware(req, res, next) {
   console.log("Pasando por middleware");
   res.locals.islogged = false;
   console.log("Locals", res.locals.islogged);
   const emailInCookie = req.cookies.userEmail;
-  const userFromCookie = User.findByField("email", emailInCookie);
+  
+  //const userFromCookie = User.findByField("email", emailInCookie);
+  const userFromCookie = false;
+  
   // console.log("userFromCookie", userFromCookie);
 
   if (userFromCookie) {
