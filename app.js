@@ -9,7 +9,8 @@ const session = require("express-session");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/usersRouter");
 const adminRouter = require("./routes/adminRouter");
-const testRouter  = require("./routes/test");
+const dashboardUsersRouter = require("./routes/dashboardUsersRouter");
+const dashboardProductsRouter = require("./routes/dashboardProductsRouter");
 
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
@@ -35,13 +36,11 @@ app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
-
-
-
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/product", adminRouter);
-app.use("/test", testRouter);
+app.use("/dashboard/users", dashboardUsersRouter);
+app.use("/dashboard/products", dashboardProductsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
