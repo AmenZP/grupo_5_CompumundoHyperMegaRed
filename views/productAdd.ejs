@@ -11,23 +11,25 @@
 
 <body>
     <!-- Partial de HEADER -->
-    <!-- <*%- include('./partials/header.ejs') %> -->
+    <%- include('./partials/header.ejs') %>
     <div class="cont prod-wrap">
         <div class="row">
-          <div class="col-12">
-            <h2>Publicá tu producto</h2>	
-          </div>
         </div>
-      
         <div class="col-12">
-          <form action="/product/productAdd" method="POST" enctype="multipart/form-data">
-          
+          <h2>Publicá tu producto</h2>
+        </div>
+
+        <div class="col-12">
+          <form action="/product/productAdd" id="agregarProductoFormulario" method="POST" enctype="multipart/form-data">
             <div class="row prod-det">
               <div class="row prod-det">
+                <p class="section-div-h1">Publicá aquí tu producto</p>
                 <div class="col=12 col-md-6">
                   <label for="name" class="form-label">Nombre del producto</label>
                   <input type="text" id="name" name="name" placeholder="Ej: Notebook HP" class="form-input">
                 </div>
+                  <p class="flechas" id="errorName" style="display:none">Nombre minimo de 5 caracteres</p>
+
                 <div class="col=12 col-md-6">
                   <label for="GPU" class="form-label">Nombre de la GPU</label>
                   <input type="text" id="gpu" name="gpu" placeholder="Ej: GTX 1060" class="form-input">
@@ -55,7 +57,7 @@
                     
                     <div class="col=12 col-md-6">
                       <label for="ImagenProducto" class="form-label">Imagen de Producto</label>
-                      <input class="form-input" type="file" name="ImagenProducto">
+                      <input class="form-input" id="imagenProducto" type="file" name="imagenProducto">
                     </div>
                     
                     
@@ -79,58 +81,8 @@
                       <!-- Partial de FOOTER -->
                     
                       <%- include('./partials/footer.ejs') %>
+                      <script src="/js/ValidationProductAdd.js"></script>
                         </body>
                     
                         </html>
-                        <!-- <div class="col=12 col-md-6">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <label for="color" class="form-label">Color</label>
-                                                                                                                                                                                                                                                                                                                                                                                            <input type="text" id="color" name="color" placeholder="Ej: Negro" class="form-input">
-                                                                                                                                                                                                                                                                                                                                                                                          </div> -->
-                        <!-- <div class="col=12 col-md-6">
-                    <label for="tipocpu" class="form-label">Tipo de CPU</label>
-                    <select name="tipocpu" id="tipocpu" class="form-input">
-                      <option value="">Intel</option>
-                      <option value="">Amd</option>
-</div> -->
-<!-- <div class="col=12 col-md-6">
-  <label for="modelocpu" class="form-label">Modelo de CPU</label>
-  <input type="text" id="modelocpu" name="modelocpu" placeholder="Ej:4460" class="form-input">
-</div> -->
-<!-- <div class="col=12 col-md-6">
-  <label for="fliacpu" class="form-label">Familia de CPU</label>
-  <input type="text" id="fliacpu" name="fliacpu" placeholder="Ej:Intel Core i7" class="form-input">
-</div> -->
-<!-- <div class="col=12 col-md-6">
-  <label for="tipogpu" class="form-label">Tipo de GPU</label>
-  <select name="tipogpu" id="tipogpu" class="form-input">
-    <option value="">nVidia</option>
-    <option value="">Radeon</option>
-</div> -->
-<!-- <div class="col=12 col-md-6">
-  <label for="memogpu" class="form-label">Memoria de GPU</label>
-  <input type="text" id="memogpu" name="memogpu" placeholder="Ej:6gb" class="form-input">
-</div>
-<div class="col=12 col-md-6">
-  <label for="modelogpu" class="form-label">Modelo de GPU</label>
-  <input type="text" id="modelogpu" name="modelogpu" placeholder="Ej:nVidia GTX1080" class="form-input">
-</div>
-<div class="col=12 col-md-6">
-  <label for="tipo" class="form-label">Tipo</label>
-  <input type="text" id="tipo" name="tipo" placeholder="Ej:Notebook" class="form-input">
-</div>
-<div class="col=12 col-md-6">
-  <label for="bateria" class="form-label">Bateria Extraible</label>
-  <select name="bateria" id="bateria" class="form-input">
-    <option value="">No</option>
-    <option value="">Si</option>
-    <option value="">No Tiene</option>
-  </select>
-</div> -->
-
-<!-- <div class="col=12 col-md-6">
-  <label for="lectorhuella" class="form-label">Lector de Huellas</label>
-  <select name="lectorhuella" id="lectorhuella" class="form-input">
-    <option value="">Si</option>
-    <option value="">No</option>
-  </select>
-</div> -->
+                        

@@ -1,7 +1,7 @@
 const { validationResult } = require("express-validator");
 const fs = require("fs");
 const path = require("path");
-//const User = require("../models/User");
+// const User = require("../models/User");
 const bcryptjs = require("bcryptjs");
 const { clearScreenDown } = require("readline");
 const { CLIENT_RENEG_LIMIT } = require("tls");
@@ -28,8 +28,6 @@ module.exports = {
       }
     });
 
-    console.log( "Encontrando por email:" );
-    console.log( userByEmail );
 
     if ( userByEmail ) {
 
@@ -58,7 +56,6 @@ module.exports = {
         newUser.category = formBody.categoriaUsuarioReg;
         newUser.image    = req.file.filename;
 
-        console.log("nuevoUsuario", newUser);
        
         //users.push(nuevoUsuario);
         //fs.writeFileSync(pathUsers, JSON.stringify(users, null, " "));
@@ -80,23 +77,30 @@ module.exports = {
     return res.render("login");
   },
 
-  processLogin: (req, res) => {
+  processLogin: async (req, res) => {
     // console.log("process", req.session);
-    let UserToLogin = User.findByField("email", req.body.email);
+    // let UserToLogin = User.findByField("email", req.body.email);
+    let useraloguear = req.body.emailLogin;
+    let UserToLogin = await models.Users.findOne({
+      where: {
+        email: req.body.emailLogin,
+      },
+    });
 
     if (UserToLogin) {
       let isOkThePassword = bcryptjs.compareSync(
-        req.body.password,
+        req.body.passwordLogin,
         UserToLogin.password
       );
       if (isOkThePassword) {
         delete UserToLogin.password;
         req.session.userLogged = UserToLogin;
-        console.log("userlogged", req.session.userLogged);
+        // console.log("userlogged****************************", UserToLogin);
 
         if (req.body.rec_usuario) {
-          res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 2 });
+          res.cookie("userEmailFinal", UserToLogin.email, { maxAge: 1000 * 60 * 5 });
         }
+        console.log("Usuario en Cookie", req.cookies.userEmailFinal);
 
         return res.redirect("/profile");
       }
@@ -111,18 +115,19 @@ module.exports = {
     return res.render("login", {
       errors: {
         email: {
-          msg: "no encontro email ",
+          msg: "Tu email no se encuentra registrado :(",
         },
       },
     });
   },
 
   profile: (req, res) => {
-    console.log("cuki", req.cookies.userEmail);
+    // console.log("cuki", req.cookies.userEmailFinal);
     // console.log("estas en perfil", req.session.userLogged);
     res.render("profile", {
       user: req.session.userLogged,
     });
+    console.log("req.session.userLogged", req.session.userLogged);
   },
 
   logout: (req, res) => {

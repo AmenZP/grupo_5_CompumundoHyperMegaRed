@@ -29,7 +29,7 @@ router.get("/", indexProducts);
 
 router.get("/productAdd", formAgregar);
 
-router.post("/productAdd", upload.single("ImagenProducto"), addProduct);
+router.post("/productAdd", upload.single("imagenProducto"), addProduct);
 
 // router.post("/agregarProducto", addProduct);
 

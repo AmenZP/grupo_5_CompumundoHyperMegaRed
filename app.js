@@ -11,30 +11,11 @@ const usersRouter = require("./routes/usersRouter");
 const adminRouter = require("./routes/adminRouter");
 const testRouter  = require("./routes/test");
 
-const app = express();
-
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", "*");
-//   res.setHeader(
-//     "Access-Control-Allow-Methods",
-//     "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-//   );
-//   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-
-//   next();
-// });
-
-// view engine setup
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
-
-app.use(logger("dev"));
+const app = express();
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, "public")));
-app.use(methodOverride("_method"));
+app.use(cookieParser());
 app.use(
   session({
     secret: "Secreto",
@@ -42,8 +23,20 @@ app.use(
     saveUninitialized: false,
   })
 );
-app.use(cookieParser());
-app.use("/", userLoggedMiddleware);
+app.use(userLoggedMiddleware);
+
+// view engine setup
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+
+app.use(logger("dev"));
+
+app.use(methodOverride("_method"));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
+
+
+
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
